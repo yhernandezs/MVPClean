@@ -7,29 +7,41 @@
 //
 
 import Foundation
+import TinderCatCore
+import RxSwift
 
-protocol CatViewDelegate: NSObjectProtocol {
-    func displayCats(cats: [Cat])
-    func showDetail()
+class CatPresenter: BasePresenter {
+
+    private var cats: [Cat]?
+
+    private let catInteractor: ObservableInteractor<[Cat], Any?>
+    internal let disposeBag = DisposeBag()
+
+    required init(catInteractor: ObservableInteractor<[Cat], Any?>) {
+        self.catInteractor = catInteractor
+    }
+
+    private var ownView: CatViewType! {
+        return self.view as? CatViewType
+    }
+
+    override func unBind() {
+        super.unBind()
+    }
 }
-class CatPresenter {
-    private let catService:CatService
-    weak private var catViewDelegate : CatViewDelegate?
-    
-    init(catService:CatService){
-        self.catService = catService
+
+extension CatPresenter: CatPresenterType {
+    func showDetail(_ cat: Cat) {
+        ownView.catDetail(cat)
     }
     
-    func setViewDelegate(catViewDelegate:CatViewDelegate?){
-        self.catViewDelegate = catViewDelegate
+    func getCats() {
+        catInteractor.execute(params: nil, onSuccess: { [weak ownView] cats in
+            ownView?.displayCats(cats: cats)
+        }) { [weak ownView] error in
+            ownView?.hideProgress()
+            //self?.handleException(error: error)
+        }.disposed(by: disposeBag)
     }
-    
-    func getCatList(){
-        self.catViewDelegate?.displayCats(cats: catService.getCats())
-    }
-    
-    func showDetail(){
-        self.catViewDelegate?.showDetail()
-    }
-    
+
 }

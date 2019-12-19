@@ -11,6 +11,15 @@
 		A915B0422398166E00991BDD /* TinderCatData.h in Headers */ = {isa = PBXBuildFile; fileRef = A915B0402398166E00991BDD /* TinderCatData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A915B056239817D400991BDD /* TinderCatCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A915B055239817D400991BDD /* TinderCatCore.framework */; };
 		A915B057239817D400991BDD /* TinderCatCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A915B055239817D400991BDD /* TinderCatCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A9397CF323AC170500132B86 /* CatMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9397CF223AC170500132B86 /* CatMocks.swift */; };
+		A9D8194D23A2F125008FAC64 /* RepositoryModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8194C23A2F125008FAC64 /* RepositoryModule.swift */; };
+		A9D8195023A2F179008FAC64 /* ServiceModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8194F23A2F179008FAC64 /* ServiceModule.swift */; };
+		A9D8195423A2F2E3008FAC64 /* BaseAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8195323A2F2E3008FAC64 /* BaseAPIClient.swift */; };
+		A9D8195723A2F521008FAC64 /* CatServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8195623A2F521008FAC64 /* CatServiceProtocol.swift */; };
+		A9D8195B23A2F58D008FAC64 /* APICat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8195A23A2F58D008FAC64 /* APICat.swift */; };
+		A9D8195D23A2F94D008FAC64 /* HelperModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8195C23A2F94D008FAC64 /* HelperModule.swift */; };
+		A9D8196F23A3DDB8008FAC64 /* CatsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8196E23A3DDB8008FAC64 /* CatsRepository.swift */; };
+		A9D8197123A3DF35008FAC64 /* APICatsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8197023A3DF35008FAC64 /* APICatsWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +44,15 @@
 		A915B0402398166E00991BDD /* TinderCatData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TinderCatData.h; sourceTree = "<group>"; };
 		A915B0412398166E00991BDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A915B055239817D400991BDD /* TinderCatCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TinderCatCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9397CF223AC170500132B86 /* CatMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatMocks.swift; sourceTree = "<group>"; };
+		A9D8194C23A2F125008FAC64 /* RepositoryModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModule.swift; sourceTree = "<group>"; };
+		A9D8194F23A2F179008FAC64 /* ServiceModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceModule.swift; sourceTree = "<group>"; };
+		A9D8195323A2F2E3008FAC64 /* BaseAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIClient.swift; sourceTree = "<group>"; };
+		A9D8195623A2F521008FAC64 /* CatServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatServiceProtocol.swift; sourceTree = "<group>"; };
+		A9D8195A23A2F58D008FAC64 /* APICat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICat.swift; sourceTree = "<group>"; };
+		A9D8195C23A2F94D008FAC64 /* HelperModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperModule.swift; sourceTree = "<group>"; };
+		A9D8196E23A3DDB8008FAC64 /* CatsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsRepository.swift; sourceTree = "<group>"; };
+		A9D8197023A3DF35008FAC64 /* APICatsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICatsWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +99,7 @@
 		A915B03F2398166E00991BDD /* TinderCatData */ = {
 			isa = PBXGroup;
 			children = (
+				A9397CF123AC16F300132B86 /* Mocks */,
 				A915B06F239841D700991BDD /* Helpers */,
 				A915B0722398422300991BDD /* Models */,
 				A915B0732398423200991BDD /* Json */,
@@ -90,6 +109,7 @@
 				A915B0772398427900991BDD /* LocalMock */,
 				A915B0402398166E00991BDD /* TinderCatData.h */,
 				A915B0412398166E00991BDD /* Info.plist */,
+				A9D8194E23A2F154008FAC64 /* Module */,
 			);
 			path = TinderCatData;
 			sourceTree = "<group>";
@@ -113,6 +133,7 @@
 		A915B0722398422300991BDD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A9D8195823A2F576008FAC64 /* Cat */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -127,6 +148,8 @@
 		A915B0742398424000991BDD /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				A9D8195523A2F501008FAC64 /* EndPoints */,
+				A9D8195323A2F2E3008FAC64 /* BaseAPIClient.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -134,6 +157,7 @@
 		A915B0752398425C00991BDD /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				A9D8196E23A3DDB8008FAC64 /* CatsRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -141,6 +165,7 @@
 		A915B0762398426900991BDD /* Wrappers */ = {
 			isa = PBXGroup;
 			children = (
+				A9D8197023A3DF35008FAC64 /* APICatsWrapper.swift */,
 			);
 			path = Wrappers;
 			sourceTree = "<group>";
@@ -150,6 +175,40 @@
 			children = (
 			);
 			path = LocalMock;
+			sourceTree = "<group>";
+		};
+		A9397CF123AC16F300132B86 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				A9397CF223AC170500132B86 /* CatMocks.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		A9D8194E23A2F154008FAC64 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				A9D8194F23A2F179008FAC64 /* ServiceModule.swift */,
+				A9D8194C23A2F125008FAC64 /* RepositoryModule.swift */,
+				A9D8195C23A2F94D008FAC64 /* HelperModule.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		A9D8195523A2F501008FAC64 /* EndPoints */ = {
+			isa = PBXGroup;
+			children = (
+				A9D8195623A2F521008FAC64 /* CatServiceProtocol.swift */,
+			);
+			path = EndPoints;
+			sourceTree = "<group>";
+		};
+		A9D8195823A2F576008FAC64 /* Cat */ = {
+			isa = PBXGroup;
+			children = (
+				A9D8195A23A2F58D008FAC64 /* APICat.swift */,
+			);
+			path = Cat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,7 +256,7 @@
 				TargetAttributes = {
 					A915B03C2398166E00991BDD = {
 						CreatedOnToolsVersion = 11.2.1;
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -259,6 +318,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9D8195723A2F521008FAC64 /* CatServiceProtocol.swift in Sources */,
+				A9D8196F23A3DDB8008FAC64 /* CatsRepository.swift in Sources */,
+				A9D8195B23A2F58D008FAC64 /* APICat.swift in Sources */,
+				A9D8195023A2F179008FAC64 /* ServiceModule.swift in Sources */,
+				A9D8194D23A2F125008FAC64 /* RepositoryModule.swift in Sources */,
+				A9D8197123A3DF35008FAC64 /* APICatsWrapper.swift in Sources */,
+				A9397CF323AC170500132B86 /* CatMocks.swift in Sources */,
+				A9D8195423A2F2E3008FAC64 /* BaseAPIClient.swift in Sources */,
+				A9D8195D23A2F94D008FAC64 /* HelperModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

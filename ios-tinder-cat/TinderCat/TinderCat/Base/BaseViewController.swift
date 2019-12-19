@@ -9,7 +9,21 @@
 import Foundation
 import UIKit
 
-class BaseViewController: UIViewController, BaseViewType {
+class BaseViewController: UIViewController, BaseView, BaseViewType {
+    func showError(error: Error) {
+
+    }
+
+    func showConnectivityError() {
+
+    }
+
+    func hideConnectivityError() {
+
+    }
+
+
+    var presenter: BasePresenterProtocol!
 
     func initializeComponents() {
         fatalError("This method must be implemented")
@@ -24,12 +38,35 @@ class BaseViewController: UIViewController, BaseViewType {
         fatalError("This method must be implemented")
     }
 
+    deinit {
+        presenter?.unBind()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        ownInit()
         initializeComponents()
         setupViews()
         setConstraints()
+    }
+
+    private func ownInit() {
+        self.injectDependencies()
+    }
+
+    private func injectDependencies() {
+        guard let delegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+
+        let className = NSStringFromClass(self.classForCoder)
+
+        guard let module = delegate.viewControllerComponent.modules[className] else {
+            return
+        }
+
+        module.inject(viewController: self)
+
     }
 
 }
