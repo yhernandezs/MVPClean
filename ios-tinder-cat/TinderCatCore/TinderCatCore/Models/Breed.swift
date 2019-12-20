@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Cat: Codable {
+public struct Breed: Codable {
     public let id: String
     public let name: String
 

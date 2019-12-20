@@ -12,19 +12,23 @@ import Vatosawa
 import Alamofire
 
 protocol CatServiceProtocol {
-    func getCats() -> Observable<[APICat]>
+    func getCats() -> Observable<[APIBreed]>
+    func getCatsDetail(with id: String) -> Observable<[APIBreedDetail]>
 
 }
 class CatService: CatServiceProtocol {
-
+  
     let cstAPIClient: ClientProtocol
 
     init(cstAPIClient: ClientProtocol) {
         self.cstAPIClient = cstAPIClient
     }
-    func getCats() -> Observable<[APICat]> {
 
-        return cstAPIClient.request(Endpoint<[APICat]>(method: HTTPMethod.get, relativePath: "Cats", authorizationType: APIAuthorizationType.none))
-        
+    func getCats() -> Observable<[APIBreed]> {
+        return cstAPIClient.request(Endpoint<[APIBreed]>(method: HTTPMethod.get, relativePath: "breeds", authorizationType: APIAuthorizationType.none))
     }
+    
+    func getCatsDetail(with id: String) -> Observable<[APIBreedDetail]> {
+          return cstAPIClient.request(Endpoint<[APIBreedDetail]>(method: HTTPMethod.get, relativePath: "images/search?breed_ids=\(id)", authorizationType: APIAuthorizationType.none))
+      }
 }

@@ -12,12 +12,12 @@ protocol CatViewType: BaseView {
     func dismiss()
     func showProgress()
     func hideProgress()
-    func displayCats(cats: [Cat])
-    func catDetail(_ cat: Cat)
+    func displayCats(cats: [Breed])
+    func catDetail(_ cat: Breed)
 
 }
 
 protocol CatPresenterType: BasePresenterProtocol {
     func getCats()
-    func showDetail(_ cat: Cat)
+    func showDetail(_ cat: Breed)
 }

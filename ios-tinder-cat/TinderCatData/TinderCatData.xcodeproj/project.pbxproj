@@ -16,10 +16,12 @@
 		A9D8195023A2F179008FAC64 /* ServiceModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8194F23A2F179008FAC64 /* ServiceModule.swift */; };
 		A9D8195423A2F2E3008FAC64 /* BaseAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8195323A2F2E3008FAC64 /* BaseAPIClient.swift */; };
 		A9D8195723A2F521008FAC64 /* CatServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8195623A2F521008FAC64 /* CatServiceProtocol.swift */; };
-		A9D8195B23A2F58D008FAC64 /* APICat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8195A23A2F58D008FAC64 /* APICat.swift */; };
+		A9D8195B23A2F58D008FAC64 /* APIBreed.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8195A23A2F58D008FAC64 /* APIBreed.swift */; };
 		A9D8195D23A2F94D008FAC64 /* HelperModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8195C23A2F94D008FAC64 /* HelperModule.swift */; };
 		A9D8196F23A3DDB8008FAC64 /* CatsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8196E23A3DDB8008FAC64 /* CatsRepository.swift */; };
 		A9D8197123A3DF35008FAC64 /* APICatsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8197023A3DF35008FAC64 /* APICatsWrapper.swift */; };
+		A9EE432523AD645D004AE029 /* DataConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EE432423AD645D004AE029 /* DataConstants.swift */; };
+		A9EE432923AD6CD5004AE029 /* APIBreedDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EE432823AD6CD5004AE029 /* APIBreedDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,10 +51,12 @@
 		A9D8194F23A2F179008FAC64 /* ServiceModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceModule.swift; sourceTree = "<group>"; };
 		A9D8195323A2F2E3008FAC64 /* BaseAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIClient.swift; sourceTree = "<group>"; };
 		A9D8195623A2F521008FAC64 /* CatServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatServiceProtocol.swift; sourceTree = "<group>"; };
-		A9D8195A23A2F58D008FAC64 /* APICat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICat.swift; sourceTree = "<group>"; };
+		A9D8195A23A2F58D008FAC64 /* APIBreed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIBreed.swift; sourceTree = "<group>"; };
 		A9D8195C23A2F94D008FAC64 /* HelperModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperModule.swift; sourceTree = "<group>"; };
 		A9D8196E23A3DDB8008FAC64 /* CatsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsRepository.swift; sourceTree = "<group>"; };
 		A9D8197023A3DF35008FAC64 /* APICatsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICatsWrapper.swift; sourceTree = "<group>"; };
+		A9EE432423AD645D004AE029 /* DataConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConstants.swift; sourceTree = "<group>"; };
+		A9EE432823AD6CD5004AE029 /* APIBreedDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIBreedDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		A915B03F2398166E00991BDD /* TinderCatData */ = {
 			isa = PBXGroup;
 			children = (
+				A9EE432323AD6445004AE029 /* Utils */,
 				A9397CF123AC16F300132B86 /* Mocks */,
 				A915B06F239841D700991BDD /* Helpers */,
 				A915B0722398422300991BDD /* Models */,
@@ -206,9 +211,18 @@
 		A9D8195823A2F576008FAC64 /* Cat */ = {
 			isa = PBXGroup;
 			children = (
-				A9D8195A23A2F58D008FAC64 /* APICat.swift */,
+				A9D8195A23A2F58D008FAC64 /* APIBreed.swift */,
+				A9EE432823AD6CD5004AE029 /* APIBreedDetail.swift */,
 			);
 			path = Cat;
+			sourceTree = "<group>";
+		};
+		A9EE432323AD6445004AE029 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A9EE432423AD645D004AE029 /* DataConstants.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,9 +334,11 @@
 			files = (
 				A9D8195723A2F521008FAC64 /* CatServiceProtocol.swift in Sources */,
 				A9D8196F23A3DDB8008FAC64 /* CatsRepository.swift in Sources */,
-				A9D8195B23A2F58D008FAC64 /* APICat.swift in Sources */,
+				A9D8195B23A2F58D008FAC64 /* APIBreed.swift in Sources */,
 				A9D8195023A2F179008FAC64 /* ServiceModule.swift in Sources */,
 				A9D8194D23A2F125008FAC64 /* RepositoryModule.swift in Sources */,
+				A9EE432923AD6CD5004AE029 /* APIBreedDetail.swift in Sources */,
+				A9EE432523AD645D004AE029 /* DataConstants.swift in Sources */,
 				A9D8197123A3DF35008FAC64 /* APICatsWrapper.swift in Sources */,
 				A9397CF323AC170500132B86 /* CatMocks.swift in Sources */,
 				A9D8195423A2F2E3008FAC64 /* BaseAPIClient.swift in Sources */,

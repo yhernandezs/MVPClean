@@ -10,11 +10,11 @@ import Foundation
 import TinderCatCore
 
 protocol CatInteractorModule {
-    var getCatsInteractor: ObservableInteractor<[Cat], Any?> { get }
+    var getCatsInteractor: ObservableInteractor<[Breed], Any?> { get }
 }
 
 extension InteractorModule: CatInteractorModule {
-    var getCatsInteractor: ObservableInteractor<[Cat], Any?> {
+    var getCatsInteractor: ObservableInteractor<[Breed], Any?> {
         return GetCatInteractor(catRepository: repositoryModule.catsRepository)
     }
     

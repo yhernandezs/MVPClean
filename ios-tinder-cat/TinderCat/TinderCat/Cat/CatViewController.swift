@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import TinderCatCore
+import SkeletonView
 
 public protocol CatViewControllerDelegate: class {
     func navigateToNextPage()
@@ -17,10 +18,12 @@ public protocol CatViewControllerDelegate: class {
 class CatViewController: BaseViewController {
 
     public weak var delegate: CatViewControllerDelegate?
-    private var catList: [Cat] = []
+    private var catList: [Breed] = []
 
     var containerView: UIView!
     var tableView: UITableView!
+    var skeleton: Skeleton = .showSkeleton
+    var numberCellSkeleton = 3
 
     private var innerPresenter: CatPresenterType! {
         return self.presenter as? CatPresenterType
@@ -47,6 +50,7 @@ class CatViewController: BaseViewController {
 
         tableView.delegate = self
         tableView.dataSource = self
+        self.tableView.reloadData()
     }
 
     override func setConstraints() {
@@ -61,19 +65,20 @@ class CatViewController: BaseViewController {
         tableView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: 0).isActive = true
 
     }
-    
-    func showDetail(_ cat: Cat) {
+
+    func showDetail(_ cat: Breed) {
         innerPresenter.showDetail(cat)
     }
 }
 
 extension CatViewController: CatViewType {
-    func catDetail(_ cat: Cat) {
+    func catDetail(_ cat: Breed) {
         self.delegate?.navigateToNextPage()
     }
 
-    func displayCats(cats: [Cat]) {
+    func displayCats(cats: [Breed]) {
         catList = cats
+        self.skeleton = .data
         self.tableView.reloadData()
     }
 
@@ -94,16 +99,29 @@ extension CatViewController: CatViewType {
 extension CatViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-        return catList.count
+        switch self.skeleton {
+        case .data:
+            return catList.count
+        case .showSkeleton:
+            return self.numberCellSkeleton
+        }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell")
-        cell.textLabel?.text = self.catList[indexPath.row].name
-        cell.detailTextLabel?.text = catList[indexPath.row].id
-        cell.accessoryType = .disclosureIndicator
-        cell.isAccessibilityElement = true
+        
+        switch self.skeleton {
+        case .data:
+            cell.textLabel?.text = self.catList[indexPath.row].name
+            cell.detailTextLabel?.text = catList[indexPath.row].id
+            cell.accessoryType = .disclosureIndicator
+            cell.isAccessibilityElement = true
+            cell.hideSkeleton()
+        case .showSkeleton:
+            cell.textLabel?.text = "tesdjfbsbdfsf"
+            cell.textLabel?.isSkeletonable = true
+            cell.textLabel?.showAnimatedGradientSkeleton()
+        }
         return cell
     }
 }
@@ -111,4 +129,9 @@ extension CatViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.showDetail(self.catList[indexPath.row])
     }
+}
+
+enum Skeleton {
+    case data
+    case showSkeleton
 }

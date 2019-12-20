@@ -24,8 +24,10 @@ public class BaseAPIClient: ClientProtocol {
     open func request<Response>(_ endpoint: Endpoint<Response>) -> Observable<Response> {
         return Observable<Response>.create({ emitter in
 
-            let url = "https://api.thecatapi.com/v1/breeds"
-
+            guard let url = self.url(path: endpoint.relativePath) else {
+                print("malformedURL")
+                return Disposables.create()
+            }
 
             let request = self.manager.request(
                 url,
@@ -80,8 +82,8 @@ public class BaseAPIClient: ClientProtocol {
                         }
                     })
                 .responseJSON(completionHandler: { (json) in
-                        debugPrint(json)
-                  
+                    debugPrint(json)
+
                 })
 
             return Disposables.create() {
@@ -114,6 +116,10 @@ public class BaseAPIClient: ClientProtocol {
     }
     private func validateResponseCode(_ responseCode: Int, currentError: Error, description: String? = nil) -> Error {
         return currentError
+    }
+    private func url(path: String) -> URL? {
+        let formattedURL = URL(string: "https://api.thecatapi.com/v1/")
+        return formattedURL?.appendingPathComponent(path)
     }
 
 }

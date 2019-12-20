@@ -9,16 +9,16 @@
 import RxSwift
 import Foundation
 
-public class GetCatInteractor: ObservableInteractor<[Cat], Any?> {
+public class GetCatInteractor: ObservableInteractor<[Breed], Any?> {
     
     private let catRepository: CatRepositoryProtocol
-    private var cats: [Cat]?
+    private var cats: [Breed]?
 
     public init(catRepository: CatRepositoryProtocol) {
         self.catRepository = catRepository
     }
 
-    override public func buildUseCase(params: Any?) -> Observable<[Cat]> {
+    override public func buildUseCase(params: Any?) -> Observable<[Breed]> {
         return catRepository.getCats().do(onNext: { cats in
             self.cats = cats
         }).catchError({ error in

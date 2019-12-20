@@ -12,12 +12,12 @@ import RxSwift
 
 class CatPresenter: BasePresenter {
 
-    private var cats: [Cat]?
+    private var cats: [Breed]?
 
-    private let catInteractor: ObservableInteractor<[Cat], Any?>
+    private let catInteractor: ObservableInteractor<[Breed], Any?>
     internal let disposeBag = DisposeBag()
 
-    required init(catInteractor: ObservableInteractor<[Cat], Any?>) {
+    required init(catInteractor: ObservableInteractor<[Breed], Any?>) {
         self.catInteractor = catInteractor
     }
 
@@ -31,7 +31,7 @@ class CatPresenter: BasePresenter {
 }
 
 extension CatPresenter: CatPresenterType {
-    func showDetail(_ cat: Cat) {
+    func showDetail(_ cat: Breed) {
         ownView.catDetail(cat)
     }
     

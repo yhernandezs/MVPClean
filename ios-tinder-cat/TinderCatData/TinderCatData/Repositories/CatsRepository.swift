@@ -17,10 +17,10 @@ class CatsRepository: CatRepositoryProtocol {
     init(catServiceProtocol: CatServiceProtocol) {
          self.catServiceProtocol = catServiceProtocol
      }
-    func getCats() -> Observable<[Cat]> {
+    func getCats() -> Observable<[Breed]> {
         return catServiceProtocol.getCats()
         .map({ apiCats in
-            var cats: [Cat] = []
+            var cats: [Breed] = []
 
             try apiCats.forEach({ apiCats in
                 cats.append(try APICatWrapper.map(apiCats))

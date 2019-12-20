@@ -190,9 +190,8 @@
 		A915AFD82398156700991BDD /* TinderCat */ = {
 			isa = PBXGroup;
 			children = (
+				A9EE432A23AD7218004AE029 /* Cat */,
 				A9D8196623A3D9CC008FAC64 /* Modules */,
-				A915B051239816EE00991BDD /* Views */,
-				A95E68F023A02E3700BA2459 /* Presenters */,
 				A915AFE72398156800991BDD /* Info.plist */,
 				A915B06D2398198100991BDD /* Base */,
 				A915B06C2398196F00991BDD /* Application */,
@@ -222,14 +221,6 @@
 				A915AFFD2398156800991BDD /* Info.plist */,
 			);
 			path = TinderCatUITests;
-			sourceTree = "<group>";
-		};
-		A915B051239816EE00991BDD /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				A915B0522398170700991BDD /* CatViewController.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		A915B06C2398196F00991BDD /* Application */ = {
@@ -293,16 +284,6 @@
 			path = BaseClass;
 			sourceTree = "<group>";
 		};
-		A95E68F023A02E3700BA2459 /* Presenters */ = {
-			isa = PBXGroup;
-			children = (
-				A95E68F123A02E8400BA2459 /* CatPresenter.swift */,
-				A9D8194723A2D93B008FAC64 /* CatContract.swift */,
-				A9D8196423A3D64E008FAC64 /* CatModule.swift */,
-			);
-			path = Presenters;
-			sourceTree = "<group>";
-		};
 		A9D8196623A3D9CC008FAC64 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,10 +295,37 @@
 		A9D8196923A3DA1E008FAC64 /* InteractorModules */ = {
 			isa = PBXGroup;
 			children = (
+				A9EE432B23AD725C004AE029 /* Cat */,
 				A9D8196723A3D9E4008FAC64 /* InteractorModule.swift */,
-				A9D8197523A7E9C2008FAC64 /* CatInteractorModule.swift */,
 			);
 			path = InteractorModules;
+			sourceTree = "<group>";
+		};
+		A9EE432A23AD7218004AE029 /* Cat */ = {
+			isa = PBXGroup;
+			children = (
+				A9EE432C23AD7277004AE029 /* CatDetail */,
+				A9D8196423A3D64E008FAC64 /* CatModule.swift */,
+				A9D8194723A2D93B008FAC64 /* CatContract.swift */,
+				A95E68F123A02E8400BA2459 /* CatPresenter.swift */,
+				A915B0522398170700991BDD /* CatViewController.swift */,
+			);
+			path = Cat;
+			sourceTree = "<group>";
+		};
+		A9EE432B23AD725C004AE029 /* Cat */ = {
+			isa = PBXGroup;
+			children = (
+				A9D8197523A7E9C2008FAC64 /* CatInteractorModule.swift */,
+			);
+			path = Cat;
+			sourceTree = "<group>";
+		};
+		A9EE432C23AD7277004AE029 /* CatDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CatDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

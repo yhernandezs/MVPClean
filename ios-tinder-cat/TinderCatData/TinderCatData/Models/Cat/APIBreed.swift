@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct APICat: Codable {
+struct APIBreed: Codable {
     let id: String
     let name: String
 }

@@ -13,6 +13,7 @@ end
 def webServicePods
   pod 'Vatosawa', :git => 'https://github.com/cebroker/Vatosawa.git'
   pod 'Alamofire'
+  pod 'SkeletonView'
 end
 
 target 'TinderCat' do

@@ -56,15 +56,4 @@ open class CompletableInteractor<P>: Interactor {
         }
     }
 }
-// NO SE COMO FUNCIONA
-extension PrimitiveSequenceType where Self: ObservableConvertibleType, Self.Trait == SingleTrait {
-    
-    public func flatMapCompletable(_ selector: @escaping (Element) -> Completable) -> Completable {
-        return self
-            .asObservable()
-            .flatMap { element -> Observable<Never> in
-                selector(element).asObservable()
-            }
-            .asCompletable()
-    }
-}
+

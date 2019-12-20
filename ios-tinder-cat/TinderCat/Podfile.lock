@@ -12,6 +12,7 @@ PODS:
   - RxRelay (5.0.1):
     - RxSwift (~> 5)
   - RxSwift (5.0.1)
+  - SkeletonView (1.8.2)
   - Vatosawa (0.1.7):
     - Alamofire
     - KeychainAccess
@@ -22,6 +23,7 @@ DEPENDENCIES:
   - RxCocoa
   - RxDataSources
   - RxSwift
+  - SkeletonView
   - Vatosawa (from `https://github.com/cebroker/Vatosawa.git`)
 
 SPEC REPOS:
@@ -33,6 +35,7 @@ SPEC REPOS:
     - RxDataSources
     - RxRelay
     - RxSwift
+    - SkeletonView
 
 EXTERNAL SOURCES:
   Vatosawa:
@@ -51,8 +54,9 @@ SPEC CHECKSUMS:
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
+  SkeletonView: bb27c39857e5492136f02ee8a3aa78de55d12ecd
   Vatosawa: fe988de1094d4ca0b9a4c08ab13fd7e0641a32ca
 
-PODFILE CHECKSUM: d05bcbb0f5226a79a41fa4cb8ead4d27d4e13242
+PODFILE CHECKSUM: c1b09805ee6d8ff242109495d8fb20006a8dd93c
 
 COCOAPODS: 1.8.4

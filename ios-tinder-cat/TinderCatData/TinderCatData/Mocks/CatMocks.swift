@@ -11,12 +11,12 @@ import TinderCatCore
 
 class CatMocks{
 
-    func getCats() -> [Cat] {
+    func getCats() -> [Breed] {
 
-        let cats = [Cat(id: "1", name: "Criollito 1"),
-                    Cat(id: "2", name: "Criollito 2"),
-                    Cat(id: "3", name: "Criollito 3"),
-                    Cat(id: "4", name: "Criollito 4")
+        let cats = [Breed(id: "1", name: "Criollito 1"),
+                    Breed(id: "2", name: "Criollito 2"),
+                    Breed(id: "3", name: "Criollito 3"),
+                    Breed(id: "4", name: "Criollito 4")
         ]
 
         return cats
