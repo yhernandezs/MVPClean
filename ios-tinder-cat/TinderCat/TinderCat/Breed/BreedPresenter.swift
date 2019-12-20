@@ -10,7 +10,7 @@ import Foundation
 import TinderCatCore
 import RxSwift
 
-class CatPresenter: BasePresenter {
+class BreedPresenter: BasePresenter {
 
     private var cats: [Breed]?
 
@@ -21,8 +21,8 @@ class CatPresenter: BasePresenter {
         self.catInteractor = catInteractor
     }
 
-    private var ownView: CatViewType! {
-        return self.view as? CatViewType
+    private var ownView: BreedViewType! {
+        return self.view as? BreedViewType
     }
 
     override func unBind() {
@@ -30,7 +30,7 @@ class CatPresenter: BasePresenter {
     }
 }
 
-extension CatPresenter: CatPresenterType {
+extension BreedPresenter: BreedPresenterType {
     func showDetail(_ cat: Breed) {
         ownView.catDetail(cat)
     }

@@ -9,10 +9,10 @@
 import UIKit
 import TinderCatCore
 
-class CatModule: AbstractModule {
+class BreedModule: AbstractModule {
     override func inject(viewController: UIViewController) {
 
-        let presenter = CatPresenter(catInteractor: interactorModule.getCatsInteractor)
-        (viewController as? CatViewController)?.presenter = presenter
+        let presenter = BreedPresenter(catInteractor: interactorModule.getCatsInteractor)
+        (viewController as? BreedViewController)?.presenter = presenter
     }
 }

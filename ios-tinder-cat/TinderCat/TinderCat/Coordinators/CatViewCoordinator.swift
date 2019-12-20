@@ -20,7 +20,7 @@ class CatViewCoordinator: Coordinator {
     }
     
     func start() {
-        let catViewController : CatViewController = CatViewController()
+        let catViewController : BreedViewController = BreedViewController()
         catViewController.delegate = self 
         self.navigationController.viewControllers = [catViewController]
     }

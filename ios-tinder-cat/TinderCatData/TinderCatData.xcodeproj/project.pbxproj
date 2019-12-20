@@ -138,7 +138,7 @@
 		A915B0722398422300991BDD /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A9D8195823A2F576008FAC64 /* Cat */,
+				A9D8195823A2F576008FAC64 /* Breed */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -208,13 +208,13 @@
 			path = EndPoints;
 			sourceTree = "<group>";
 		};
-		A9D8195823A2F576008FAC64 /* Cat */ = {
+		A9D8195823A2F576008FAC64 /* Breed */ = {
 			isa = PBXGroup;
 			children = (
 				A9D8195A23A2F58D008FAC64 /* APIBreed.swift */,
 				A9EE432823AD6CD5004AE029 /* APIBreedDetail.swift */,
 			);
-			path = Cat;
+			path = Breed;
 			sourceTree = "<group>";
 		};
 		A9EE432323AD6445004AE029 /* Utils */ = {

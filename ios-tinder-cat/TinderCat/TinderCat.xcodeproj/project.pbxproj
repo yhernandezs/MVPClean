@@ -19,7 +19,7 @@
 		A915B04D2398168300991BDD /* TinderCatData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A915B04C2398168300991BDD /* TinderCatData.framework */; };
 		A915B04E2398168300991BDD /* TinderCatData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A915B04C2398168300991BDD /* TinderCatData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A915B050239816E100991BDD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A915B04F239816E100991BDD /* BaseViewController.swift */; };
-		A915B0532398170700991BDD /* CatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A915B0522398170700991BDD /* CatViewController.swift */; };
+		A915B0532398170700991BDD /* BreedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A915B0522398170700991BDD /* BreedViewController.swift */; };
 		A915B07923998E5400991BDD /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A915B07823998E5400991BDD /* Coordinator.swift */; };
 		A915B07C23998F9000991BDD /* FirstCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A915B07B23998F9000991BDD /* FirstCoordinator.swift */; };
 		A915B07E2399941C00991BDD /* BaseViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A915B07D2399941C00991BDD /* BaseViewType.swift */; };
@@ -33,14 +33,15 @@
 		A95E68E7239FFA5D00BA2459 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95E68E6239FFA5D00BA2459 /* BasePresenter.swift */; };
 		A95E68E9239FFAF500BA2459 /* ErrorProcessorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95E68E8239FFAF500BA2459 /* ErrorProcessorProtocol.swift */; };
 		A95E68EB239FFFC200BA2459 /* TableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95E68EA239FFFC200BA2459 /* TableViewAdapter.swift */; };
-		A95E68F223A02E8400BA2459 /* CatPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95E68F123A02E8400BA2459 /* CatPresenter.swift */; };
+		A95E68F223A02E8400BA2459 /* BreedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95E68F123A02E8400BA2459 /* BreedPresenter.swift */; };
 		A97BFCD623A919CF00804A22 /* ViewControllerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97BFCD523A919CF00804A22 /* ViewControllerComponent.swift */; };
 		A97BFCD823A91A2300804A22 /* PresenterModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97BFCD723A91A2300804A22 /* PresenterModule.swift */; };
-		A9D8194823A2D93B008FAC64 /* CatContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8194723A2D93B008FAC64 /* CatContract.swift */; };
+		A9D8194823A2D93B008FAC64 /* BreedContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8194723A2D93B008FAC64 /* BreedContract.swift */; };
 		A9D8194B23A2F07B008FAC64 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8194A23A2F07B008FAC64 /* Module.swift */; };
-		A9D8196523A3D64E008FAC64 /* CatModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8196423A3D64E008FAC64 /* CatModule.swift */; };
+		A9D8196523A3D64E008FAC64 /* BreedModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8196423A3D64E008FAC64 /* BreedModule.swift */; };
 		A9D8196823A3D9E4008FAC64 /* InteractorModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8196723A3D9E4008FAC64 /* InteractorModule.swift */; };
-		A9D8197623A7E9C2008FAC64 /* CatInteractorModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8197523A7E9C2008FAC64 /* CatInteractorModule.swift */; };
+		A9D8197623A7E9C2008FAC64 /* BreedInteractorModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8197523A7E9C2008FAC64 /* BreedInteractorModule.swift */; };
+		A9EE432E23AD7689004AE029 /* BreedDetailInteractorModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EE432D23AD7689004AE029 /* BreedDetailInteractorModule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,7 +95,7 @@
 		A915B0482398167F00991BDD /* TinderCatCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TinderCatCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A915B04C2398168300991BDD /* TinderCatData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TinderCatData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A915B04F239816E100991BDD /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		A915B0522398170700991BDD /* CatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatViewController.swift; sourceTree = "<group>"; };
+		A915B0522398170700991BDD /* BreedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedViewController.swift; sourceTree = "<group>"; };
 		A915B07823998E5400991BDD /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		A915B07B23998F9000991BDD /* FirstCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCoordinator.swift; sourceTree = "<group>"; };
 		A915B07D2399941C00991BDD /* BaseViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewType.swift; sourceTree = "<group>"; };
@@ -108,14 +109,15 @@
 		A95E68E6239FFA5D00BA2459 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		A95E68E8239FFAF500BA2459 /* ErrorProcessorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorProcessorProtocol.swift; sourceTree = "<group>"; };
 		A95E68EA239FFFC200BA2459 /* TableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAdapter.swift; sourceTree = "<group>"; };
-		A95E68F123A02E8400BA2459 /* CatPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatPresenter.swift; sourceTree = "<group>"; };
+		A95E68F123A02E8400BA2459 /* BreedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedPresenter.swift; sourceTree = "<group>"; };
 		A97BFCD523A919CF00804A22 /* ViewControllerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerComponent.swift; sourceTree = "<group>"; };
 		A97BFCD723A91A2300804A22 /* PresenterModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterModule.swift; sourceTree = "<group>"; };
-		A9D8194723A2D93B008FAC64 /* CatContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatContract.swift; sourceTree = "<group>"; };
+		A9D8194723A2D93B008FAC64 /* BreedContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedContract.swift; sourceTree = "<group>"; };
 		A9D8194A23A2F07B008FAC64 /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
-		A9D8196423A3D64E008FAC64 /* CatModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatModule.swift; sourceTree = "<group>"; };
+		A9D8196423A3D64E008FAC64 /* BreedModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedModule.swift; sourceTree = "<group>"; };
 		A9D8196723A3D9E4008FAC64 /* InteractorModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorModule.swift; sourceTree = "<group>"; };
-		A9D8197523A7E9C2008FAC64 /* CatInteractorModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatInteractorModule.swift; sourceTree = "<group>"; };
+		A9D8197523A7E9C2008FAC64 /* BreedInteractorModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedInteractorModule.swift; sourceTree = "<group>"; };
+		A9EE432D23AD7689004AE029 /* BreedDetailInteractorModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailInteractorModule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,7 +192,7 @@
 		A915AFD82398156700991BDD /* TinderCat */ = {
 			isa = PBXGroup;
 			children = (
-				A9EE432A23AD7218004AE029 /* Cat */,
+				A9EE432A23AD7218004AE029 /* Breed */,
 				A9D8196623A3D9CC008FAC64 /* Modules */,
 				A915AFE72398156800991BDD /* Info.plist */,
 				A915B06D2398198100991BDD /* Base */,
@@ -295,37 +297,38 @@
 		A9D8196923A3DA1E008FAC64 /* InteractorModules */ = {
 			isa = PBXGroup;
 			children = (
-				A9EE432B23AD725C004AE029 /* Cat */,
+				A9EE432B23AD725C004AE029 /* Breed */,
 				A9D8196723A3D9E4008FAC64 /* InteractorModule.swift */,
 			);
 			path = InteractorModules;
 			sourceTree = "<group>";
 		};
-		A9EE432A23AD7218004AE029 /* Cat */ = {
+		A9EE432A23AD7218004AE029 /* Breed */ = {
 			isa = PBXGroup;
 			children = (
-				A9EE432C23AD7277004AE029 /* CatDetail */,
-				A9D8196423A3D64E008FAC64 /* CatModule.swift */,
-				A9D8194723A2D93B008FAC64 /* CatContract.swift */,
-				A95E68F123A02E8400BA2459 /* CatPresenter.swift */,
-				A915B0522398170700991BDD /* CatViewController.swift */,
+				A9EE432C23AD7277004AE029 /* BreedDetail */,
+				A9D8196423A3D64E008FAC64 /* BreedModule.swift */,
+				A9D8194723A2D93B008FAC64 /* BreedContract.swift */,
+				A95E68F123A02E8400BA2459 /* BreedPresenter.swift */,
+				A915B0522398170700991BDD /* BreedViewController.swift */,
 			);
-			path = Cat;
+			path = Breed;
 			sourceTree = "<group>";
 		};
-		A9EE432B23AD725C004AE029 /* Cat */ = {
+		A9EE432B23AD725C004AE029 /* Breed */ = {
 			isa = PBXGroup;
 			children = (
-				A9D8197523A7E9C2008FAC64 /* CatInteractorModule.swift */,
+				A9D8197523A7E9C2008FAC64 /* BreedInteractorModule.swift */,
+				A9EE432D23AD7689004AE029 /* BreedDetailInteractorModule.swift */,
 			);
-			path = Cat;
+			path = Breed;
 			sourceTree = "<group>";
 		};
-		A9EE432C23AD7277004AE029 /* CatDetail */ = {
+		A9EE432C23AD7277004AE029 /* BreedDetail */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = CatDetail;
+			path = BreedDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -510,21 +513,22 @@
 				A97BFCD623A919CF00804A22 /* ViewControllerComponent.swift in Sources */,
 				A97BFCD823A91A2300804A22 /* PresenterModule.swift in Sources */,
 				A95E68E0239FF81D00BA2459 /* BaseView.swift in Sources */,
-				A95E68F223A02E8400BA2459 /* CatPresenter.swift in Sources */,
+				A95E68F223A02E8400BA2459 /* BreedPresenter.swift in Sources */,
 				A915AFDA2398156700991BDD /* AppDelegate.swift in Sources */,
 				A915B0822399973000991BDD /* SecondViewController.swift in Sources */,
 				A9D8194B23A2F07B008FAC64 /* Module.swift in Sources */,
 				A9D8196823A3D9E4008FAC64 /* InteractorModule.swift in Sources */,
 				A915B080239996D400991BDD /* FirstViewController.swift in Sources */,
 				A915B07923998E5400991BDD /* Coordinator.swift in Sources */,
-				A9D8197623A7E9C2008FAC64 /* CatInteractorModule.swift in Sources */,
+				A9D8197623A7E9C2008FAC64 /* BreedInteractorModule.swift in Sources */,
 				A915B07E2399941C00991BDD /* BaseViewType.swift in Sources */,
+				A9EE432E23AD7689004AE029 /* BreedDetailInteractorModule.swift in Sources */,
 				A95E68E7239FFA5D00BA2459 /* BasePresenter.swift in Sources */,
 				A915B0882399B0BC00991BDD /* ThirdViewController.swift in Sources */,
-				A915B0532398170700991BDD /* CatViewController.swift in Sources */,
+				A915B0532398170700991BDD /* BreedViewController.swift in Sources */,
 				A915B08B2399B84500991BDD /* CatViewCoordinator.swift in Sources */,
-				A9D8194823A2D93B008FAC64 /* CatContract.swift in Sources */,
-				A9D8196523A3D64E008FAC64 /* CatModule.swift in Sources */,
+				A9D8194823A2D93B008FAC64 /* BreedContract.swift in Sources */,
+				A9D8196523A3D64E008FAC64 /* BreedModule.swift in Sources */,
 				A95E68EB239FFFC200BA2459 /* TableViewAdapter.swift in Sources */,
 				A915AFDC2398156700991BDD /* SceneDelegate.swift in Sources */,
 				A95E68DC239FF6F100BA2459 /* ErrorHandlerProtocol.swift in Sources */,

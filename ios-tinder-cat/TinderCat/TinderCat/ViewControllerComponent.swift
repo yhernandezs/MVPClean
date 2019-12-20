@@ -30,7 +30,7 @@ class ViewControllerComponent {
         let dependencies = AbstractModule.InputDependencies(helperModule: helperModule,
                    repositoryModule: repositoryModule,
                    interactorModule: interactorModule)
-        modules[NSStringFromClass(CatViewController.self.classForCoder())] = CatModule(dependencies: dependencies)
+        modules[NSStringFromClass(BreedViewController.self.classForCoder())] = BreedModule(dependencies: dependencies)
 
 
     }

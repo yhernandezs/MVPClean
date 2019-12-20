@@ -8,7 +8,7 @@
 
 import Foundation
 import TinderCatCore
-protocol CatViewType: BaseView {
+protocol BreedViewType: BaseView {
     func dismiss()
     func showProgress()
     func hideProgress()
@@ -17,7 +17,7 @@ protocol CatViewType: BaseView {
 
 }
 
-protocol CatPresenterType: BasePresenterProtocol {
+protocol BreedPresenterType: BasePresenterProtocol {
     func getCats()
     func showDetail(_ cat: Breed)
 }

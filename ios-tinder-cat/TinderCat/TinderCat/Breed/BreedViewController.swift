@@ -15,7 +15,7 @@ public protocol CatViewControllerDelegate: class {
     func navigateToNextPage()
 }
 
-class CatViewController: BaseViewController {
+class BreedViewController: BaseViewController {
 
     public weak var delegate: CatViewControllerDelegate?
     private var catList: [Breed] = []
@@ -25,8 +25,8 @@ class CatViewController: BaseViewController {
     var skeleton: Skeleton = .showSkeleton
     var numberCellSkeleton = 3
 
-    private var innerPresenter: CatPresenterType! {
-        return self.presenter as? CatPresenterType
+    private var innerPresenter: BreedPresenterType! {
+        return self.presenter as? BreedPresenterType
     }
 
     override func initializeComponents() {
@@ -71,7 +71,7 @@ class CatViewController: BaseViewController {
     }
 }
 
-extension CatViewController: CatViewType {
+extension BreedViewController: BreedViewType {
     func catDetail(_ cat: Breed) {
         self.delegate?.navigateToNextPage()
     }
@@ -96,7 +96,7 @@ extension CatViewController: CatViewType {
 
 }
 
-extension CatViewController: UITableViewDataSource {
+extension BreedViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch self.skeleton {
@@ -125,7 +125,7 @@ extension CatViewController: UITableViewDataSource {
         return cell
     }
 }
-extension CatViewController: UITableViewDelegate {
+extension BreedViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.showDetail(self.catList[indexPath.row])
     }

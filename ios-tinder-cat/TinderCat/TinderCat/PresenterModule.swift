@@ -15,8 +15,8 @@ class PresenterModule {
         self.interactorModule = interactorModule
     }
 
-    func catPresenter() -> CatPresenterType {
-        return CatPresenter(catInteractor: interactorModule.getCatsInteractor)
+    func catPresenter() -> BreedPresenterType {
+        return BreedPresenter(catInteractor: interactorModule.getCatsInteractor)
     }
     func getInteractorModule() -> InteractorModule {
         return interactorModule
