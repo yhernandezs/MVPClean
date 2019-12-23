@@ -18,8 +18,8 @@ public class ServiceModule {
 
     var catAPIClient: ClientProtocol = BaseAPIClient()
 
-    lazy var catService: CatServiceProtocol = {
-        return CatService(cstAPIClient: catAPIClient)
+    lazy var catService: BreedServiceType = {
+        return BreedService(breedAPIClient: catAPIClient)
     }()
 
 }

@@ -16,8 +16,8 @@ public class RepositoryModule {
     public init() {
     }
 
-    public lazy var catsRepository: CatRepositoryProtocol = {
-        return CatsRepository(catServiceProtocol: self.serviceModule.catService)
+    public lazy var catsRepository: BreedRepositoryType = {
+        return BreedRepository(breedServiceType: self.serviceModule.catService)
     }()
     
 }

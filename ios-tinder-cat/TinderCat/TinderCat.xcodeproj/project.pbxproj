@@ -116,7 +116,7 @@
 		A9D8194A23A2F07B008FAC64 /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
 		A9D8196423A3D64E008FAC64 /* BreedModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedModule.swift; sourceTree = "<group>"; };
 		A9D8196723A3D9E4008FAC64 /* InteractorModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorModule.swift; sourceTree = "<group>"; };
-		A9D8197523A7E9C2008FAC64 /* BreedInteractorModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedInteractorModule.swift; sourceTree = "<group>"; };
+		A9D8197523A7E9C2008FAC64 /* BreedInteractorModule.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = BreedInteractorModule.swift; sourceTree = "<group>"; };
 		A9EE432D23AD7689004AE029 /* BreedDetailInteractorModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailInteractorModule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 

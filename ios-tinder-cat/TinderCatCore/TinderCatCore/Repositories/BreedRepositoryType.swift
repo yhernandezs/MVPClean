@@ -8,6 +8,6 @@
 
 import RxSwift
 
-public protocol CatRepositoryProtocol {
-    func getCats() -> Observable<[Breed]>
+public protocol BreedRepositoryType {
+    func getBreeds() -> Observable<[Breed]>
 }

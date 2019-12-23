@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		A915B0182398161100991BDD /* TinderCatCore.h in Headers */ = {isa = PBXBuildFile; fileRef = A915B0162398161100991BDD /* TinderCatCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9D8194623A2D634008FAC64 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8194523A2D634008FAC64 /* Interactor.swift */; };
-		A9D8196B23A3DC4D008FAC64 /* CatsRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8196A23A3DC4D008FAC64 /* CatsRepositoryProtocol.swift */; };
+		A9D8196B23A3DC4D008FAC64 /* BreedRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8196A23A3DC4D008FAC64 /* BreedRepositoryType.swift */; };
 		A9D8196D23A3DC9F008FAC64 /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8196C23A3DC9F008FAC64 /* Breed.swift */; };
-		A9D8197423A3EBA3008FAC64 /* GetCatInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8197323A3EBA3008FAC64 /* GetCatInteractor.swift */; };
+		A9D8197423A3EBA3008FAC64 /* GetBreedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8197323A3EBA3008FAC64 /* GetBreedInteractor.swift */; };
 		A9EE432723AD6AD1004AE029 /* BreedDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EE432623AD6AD1004AE029 /* BreedDetail.swift */; };
 		D9D482CFE875D2C643D07B71 /* Pods_TinderCatCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7990E3F3CCAD2D6C169EF83 /* Pods_TinderCatCore.framework */; };
 /* End PBXBuildFile section */
@@ -23,9 +23,9 @@
 		A915B0162398161100991BDD /* TinderCatCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TinderCatCore.h; sourceTree = "<group>"; };
 		A915B0172398161100991BDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9D8194523A2D634008FAC64 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
-		A9D8196A23A3DC4D008FAC64 /* CatsRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsRepositoryProtocol.swift; sourceTree = "<group>"; };
+		A9D8196A23A3DC4D008FAC64 /* BreedRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedRepositoryType.swift; sourceTree = "<group>"; };
 		A9D8196C23A3DC9F008FAC64 /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
-		A9D8197323A3EBA3008FAC64 /* GetCatInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCatInteractor.swift; sourceTree = "<group>"; };
+		A9D8197323A3EBA3008FAC64 /* GetBreedInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBreedInteractor.swift; sourceTree = "<group>"; };
 		A9EE432623AD6AD1004AE029 /* BreedDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetail.swift; sourceTree = "<group>"; };
 		F7990E3F3CCAD2D6C169EF83 /* Pods_TinderCatCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TinderCatCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -110,7 +110,7 @@
 		A915B0672398188600991BDD /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
-				A9D8197223A3EB80008FAC64 /* Cat */,
+				A9D8197223A3EB80008FAC64 /* Breed */,
 				A9D8194523A2D634008FAC64 /* Interactor.swift */,
 			);
 			path = Interactors;
@@ -128,7 +128,7 @@
 		A915B069239818A400991BDD /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				A9D8196A23A3DC4D008FAC64 /* CatsRepositoryProtocol.swift */,
+				A9D8196A23A3DC4D008FAC64 /* BreedRepositoryType.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -140,12 +140,12 @@
 			path = Workers;
 			sourceTree = "<group>";
 		};
-		A9D8197223A3EB80008FAC64 /* Cat */ = {
+		A9D8197223A3EB80008FAC64 /* Breed */ = {
 			isa = PBXGroup;
 			children = (
-				A9D8197323A3EBA3008FAC64 /* GetCatInteractor.swift */,
+				A9D8197323A3EBA3008FAC64 /* GetBreedInteractor.swift */,
 			);
-			path = Cat;
+			path = Breed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,8 +254,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9D8197423A3EBA3008FAC64 /* GetCatInteractor.swift in Sources */,
-				A9D8196B23A3DC4D008FAC64 /* CatsRepositoryProtocol.swift in Sources */,
+				A9D8197423A3EBA3008FAC64 /* GetBreedInteractor.swift in Sources */,
+				A9D8196B23A3DC4D008FAC64 /* BreedRepositoryType.swift in Sources */,
 				A9D8194623A2D634008FAC64 /* Interactor.swift in Sources */,
 				A9EE432723AD6AD1004AE029 /* BreedDetail.swift in Sources */,
 				A9D8196D23A3DC9F008FAC64 /* Breed.swift in Sources */,

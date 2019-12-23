@@ -9,7 +9,7 @@
 import Foundation
 import TinderCatCore
 
-class APICatWrapper {
+class APIBreedWrapper {
     static func map(_ input: APIBreed) throws -> Breed {
        
         return Breed(id: input.id, name: input.name)
