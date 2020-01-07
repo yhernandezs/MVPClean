@@ -31,6 +31,8 @@ class ViewControllerComponent {
                    repositoryModule: repositoryModule,
                    interactorModule: interactorModule)
         modules[NSStringFromClass(BreedViewController.self.classForCoder())] = BreedModule(dependencies: dependencies)
+        modules[NSStringFromClass(BreedDetailViewController.self.classForCoder())] = BreedDetailModule(dependencies: dependencies)
+
 
 
     }

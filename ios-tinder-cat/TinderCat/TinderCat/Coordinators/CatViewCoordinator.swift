@@ -31,7 +31,7 @@ class CatViewCoordinator: Coordinator {
 extension CatViewCoordinator: CatViewControllerDelegate {
 
     func navigateToNextPage() {
-       let secondCoordinator = SecondCoordinator(navigationController: navigationController)
+       let secondCoordinator = BreedDetailCoordinator(navigationController: navigationController)
        secondCoordinator.delegate = self
        childCoordinators.append(secondCoordinator)
        secondCoordinator.start()
@@ -40,7 +40,7 @@ extension CatViewCoordinator: CatViewControllerDelegate {
 
 extension CatViewCoordinator: BackToFirstViewControllerDelegate {
     
-    func navigateBackToFirstPage(newOrderCoordinator: SecondCoordinator) {
+    func navigateBackToFirstPage(newOrderCoordinator: BreedDetailCoordinator) {
         navigationController.popToRootViewController(animated: true)
         childCoordinators.removeLast()
     }

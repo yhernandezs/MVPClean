@@ -9,3 +9,13 @@
 import Foundation
 import TinderCatCore
 
+protocol BreedDetailInteractorModule {
+    var getBreedDetailInteractor: ObservableInteractor<BreedDetail, String> { get }
+}
+
+extension InteractorModule: BreedDetailInteractorModule{
+    var getBreedDetailInteractor: ObservableInteractor<BreedDetail, String> {
+        return GetBreedDetailInteractor(breedRepository: repositoryModule.catsRepository)
+        
+    }
+}

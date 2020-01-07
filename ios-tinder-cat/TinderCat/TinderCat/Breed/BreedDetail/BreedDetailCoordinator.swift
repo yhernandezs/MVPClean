@@ -1,8 +1,8 @@
 //
-//  SecondCoordinator.swift
+//  File.swift
 //  TinderCat
 //
-//  Created by Yesid Hernandez on 5/12/19.
+//  Created by Yesid Hernandez on 30/12/19.
 //  Copyright © 2019 Yesid Hernandez. All rights reserved.
 //
 
@@ -11,11 +11,11 @@ import UIKit
 
 protocol BackToFirstViewControllerDelegate: class {
     
-    func navigateBackToFirstPage(newOrderCoordinator: SecondCoordinator)
+    func navigateBackToFirstPage(newOrderCoordinator: BreedDetailCoordinator)
     
 }
 
-class SecondCoordinator: Coordinator {
+class BreedDetailCoordinator: Coordinator {
     
     var childCoordinators: [Coordinator] = []
     
@@ -29,18 +29,15 @@ class SecondCoordinator: Coordinator {
     }
     
     func start() {
-        let secondViewController : SecondViewController = SecondViewController()
+        let secondViewController : BreedDetailViewController = BreedDetailViewController()
         secondViewController.delegate = self 
         self.navigationController.pushViewController(secondViewController, animated: true)
     }
 }
 
-extension SecondCoordinator : SecondViewControllerDelegate {
+extension BreedDetailCoordinator : BreedDetailViewControllerDelegate {
     
     func navigateToThirdPage() {
-        let thirdViewController : ThirdViewController = ThirdViewController()
-        thirdViewController.delegate = self
-        self.navigationController.pushViewController(thirdViewController, animated: true)
     }
     
     func navigateToFirstPage() {

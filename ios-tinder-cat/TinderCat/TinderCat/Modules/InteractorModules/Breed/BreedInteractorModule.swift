@@ -14,6 +14,7 @@ protocol BreedInteractorModule {
 }
 
 extension InteractorModule: BreedInteractorModule {
+   
     var getCatsInteractor: ObservableInteractor<[Breed], Any?> {
         return GetBreedInteractor(breedRepository: repositoryModule.catsRepository)
     }
