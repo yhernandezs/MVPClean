@@ -36,8 +36,8 @@ class BreedDetailViewController: BaseViewController {
         containerView = UIView()
         imageView = UIImageView()
         textViewTitle = UITextView()
-        
-        
+
+
         containerView.translatesAutoresizingMaskIntoConstraints = false
         imageView.translatesAutoresizingMaskIntoConstraints = false
         textViewTitle.translatesAutoresizingMaskIntoConstraints = false
@@ -56,18 +56,12 @@ class BreedDetailViewController: BaseViewController {
         containerView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
         containerView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
         containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
-        
+
         imageView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 10).isActive = true
         imageView.leftAnchor.constraint(equalTo: containerView.leftAnchor, constant: 10).isActive = true
         imageView.rightAnchor.constraint(equalTo: containerView.rightAnchor, constant: -10).isActive = true
         imageView.heightAnchor.constraint(equalToConstant: 300).isActive = true
-        
-        textViewTitle.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 10).isActive = true
-        textViewTitle.leftAnchor.constraint(equalTo: containerView.leftAnchor, constant: 10).isActive = true
-        textViewTitle.rightAnchor.constraint(equalTo: containerView.rightAnchor, constant: -10).isActive = true
-        textViewTitle.heightAnchor.constraint(equalToConstant: 100).isActive = true
 
-        
     }
 
 }

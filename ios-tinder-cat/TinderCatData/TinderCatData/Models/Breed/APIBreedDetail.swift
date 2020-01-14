@@ -8,8 +8,7 @@
 
 import Foundation
 struct APIBreedDetail: Codable {
-    let breeds: [APIBreed]
-    let id: String
-    let url: String
-    let width, height: Int
+    public let id: String
+    public let name: String
+    public let description: String
 }

@@ -10,4 +10,5 @@ import RxSwift
 
 public protocol BreedRepositoryType {
     func getBreeds() -> Observable<[Breed]>
+    func getBreedDetail(_ id: String) -> Observable<BreedDetail>
 }

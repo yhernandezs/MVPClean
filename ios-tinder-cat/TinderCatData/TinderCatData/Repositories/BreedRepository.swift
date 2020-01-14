@@ -11,23 +11,30 @@ import TinderCatCore
 import RxSwift
 
 class BreedRepository: BreedRepositoryType {
-    
+
     private let breedServiceType: BreedServiceType
-    
+
     init(breedServiceType: BreedServiceType) {
-         self.breedServiceType = breedServiceType
-     }
+        self.breedServiceType = breedServiceType
+    }
+
     func getBreeds() -> Observable<[Breed]> {
         return breedServiceType.getBreeds()
-        .map({ apiBreeds in
-            var breeds: [Breed] = []
+            .map({ apiBreeds in
+                var breeds: [Breed] = []
 
-            try apiBreeds.forEach({ apiBreeds in
-                breeds.append(try APIBreedWrapper.map(apiBreeds))
+                try apiBreeds.forEach({ apiBreeds in
+                    breeds.append(try APIBreedWrapper.map(apiBreeds))
+                })
+
+                return breeds
             })
 
-            return breeds
-        })
-        
+    }
+
+    func getBreedDetail(_ id: String) -> Observable<BreedDetail> {
+        return breedServiceType.getBreedsDetail(with: id).map { breedDetail in
+            try APIBreedWrapper.map(breedDetail)
+        }
     }
 }
