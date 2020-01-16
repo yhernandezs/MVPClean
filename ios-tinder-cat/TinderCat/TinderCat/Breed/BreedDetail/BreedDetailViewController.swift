@@ -18,36 +18,41 @@ public protocol BreedDetailViewControllerDelegate: class {
 class BreedDetailViewController: BaseViewController {
     private var containerView: UIView!
     private var imageView: UIImageView!
-    private var textViewTitle: UITextView!
+    private var titleLabel: UILabel!
+    private var descriptionTextView: UITextView!
     public weak var delegate: BreedDetailViewControllerDelegate?
-
 
     private var innerPresenter: BreedDetailPresenterType! {
         return self.presenter as? BreedDetailPresenterType
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.innerPresenter.bind(withView: self)
         self.innerPresenter.getBreed("beng")
-
     }
 
     override func initializeComponents() {
         containerView = UIView()
         imageView = UIImageView()
-        textViewTitle = UITextView()
-
+        titleLabel = UILabel()
+        descriptionTextView = UITextView()
 
         containerView.translatesAutoresizingMaskIntoConstraints = false
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        textViewTitle.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        descriptionTextView.translatesAutoresizingMaskIntoConstraints = false
     }
 
     override func setupViews() {
         imageView.backgroundColor = UIColor.red
-        textViewTitle.textColor = UIColor.white
-
+        titleLabel.textColor = UIColor.black
+        containerView.backgroundColor = UIColor.white
+        
         containerView.addSubview(imageView)
+        containerView.addSubview(titleLabel)
+        containerView.addSubview(descriptionTextView)
+
         view.addSubview(containerView)
     }
 
@@ -62,12 +67,21 @@ class BreedDetailViewController: BaseViewController {
         imageView.rightAnchor.constraint(equalTo: containerView.rightAnchor, constant: -10).isActive = true
         imageView.heightAnchor.constraint(equalToConstant: 300).isActive = true
 
-    }
+        titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 10).isActive = true
+        titleLabel.leftAnchor.constraint(equalTo: imageView.leftAnchor).isActive = true
+        titleLabel.rightAnchor.constraint(equalTo: imageView.rightAnchor).isActive = true
 
+        descriptionTextView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10).isActive = true
+        descriptionTextView.leftAnchor.constraint(equalTo: titleLabel.leftAnchor).isActive = true
+        descriptionTextView.rightAnchor.constraint(equalTo: titleLabel.rightAnchor).isActive = true
+        descriptionTextView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -10).isActive = true
+
+    }
 }
 
 extension BreedDetailViewController: BreedDetailViewType {
     func displayBreed(_ breed: BreedDetail) {
-        textViewTitle.text = breed.name
+        titleLabel.text = breed.name
+        descriptionTextView.text = breed.description
     }
 }
