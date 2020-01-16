@@ -15,11 +15,13 @@ class BreesDetailPresenter: BasePresenter {
     private var breed: BreedDetail?
 
     private let breedInteractor: ObservableInteractor<BreedDetail, String>
+    
     internal let disposeBag = DisposeBag()
 
     required init(breedInteractor: ObservableInteractor<BreedDetail, String>) {
         self.breedInteractor = breedInteractor
     }
+    
     private var ownView: BreedDetailViewType! {
         return self.view as? BreedDetailViewType
     }
@@ -27,17 +29,17 @@ class BreesDetailPresenter: BasePresenter {
     override func unBind() {
         super.unBind()
     }
-
 }
-extension BreesDetailPresenter: BreedDetailPresenterType{
+
+extension BreesDetailPresenter: BreedDetailPresenterType {
     func getBreed(_ id: String) {
-        
-         breedInteractor.execute(params: id, onSuccess: { [weak ownView] breedDeyail in
-            
+
+        breedInteractor.execute(params: id, onSuccess: { [weak ownView] breedDeyail in
+
             ownView?.displayBreed(breedDeyail)
-         }) { [weak ownView] error in
+        }) { [weak ownView] error in
             ownView?.hideConnectivityError()
             print(error)
-         }.disposed(by: disposeBag)
-    }   
+        }.disposed(by: disposeBag)
+    }
 }

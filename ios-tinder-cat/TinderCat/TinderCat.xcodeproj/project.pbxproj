@@ -20,9 +20,9 @@
 		A915B04E2398168300991BDD /* TinderCatData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A915B04C2398168300991BDD /* TinderCatData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A915B050239816E100991BDD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A915B04F239816E100991BDD /* BaseViewController.swift */; };
 		A915B0532398170700991BDD /* BreedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A915B0522398170700991BDD /* BreedViewController.swift */; };
-		A915B07923998E5400991BDD /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A915B07823998E5400991BDD /* Coordinator.swift */; };
+		A915B07923998E5400991BDD /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A915B07823998E5400991BDD /* BaseCoordinator.swift */; };
 		A915B07E2399941C00991BDD /* BaseViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A915B07D2399941C00991BDD /* BaseViewType.swift */; };
-		A915B08B2399B84500991BDD /* CatViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A915B08A2399B84500991BDD /* CatViewCoordinator.swift */; };
+		A915B08B2399B84500991BDD /* BreedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A915B08A2399B84500991BDD /* BreedCoordinator.swift */; };
 		A91D5D1223B15170000E3EA8 /* BreedDetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91D5D1123B15170000E3EA8 /* BreedDetailModule.swift */; };
 		A91D5D1423B15225000E3EA8 /* BreedDetailContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91D5D1323B15225000E3EA8 /* BreedDetailContract.swift */; };
 		A91D5D1623B1523E000E3EA8 /* BreedDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91D5D1523B1523E000E3EA8 /* BreedDetailPresenter.swift */; };
@@ -110,9 +110,9 @@
 		A915B04C2398168300991BDD /* TinderCatData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TinderCatData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A915B04F239816E100991BDD /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A915B0522398170700991BDD /* BreedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedViewController.swift; sourceTree = "<group>"; };
-		A915B07823998E5400991BDD /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		A915B07823998E5400991BDD /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		A915B07D2399941C00991BDD /* BaseViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewType.swift; sourceTree = "<group>"; };
-		A915B08A2399B84500991BDD /* CatViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatViewCoordinator.swift; sourceTree = "<group>"; };
+		A915B08A2399B84500991BDD /* BreedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedCoordinator.swift; sourceTree = "<group>"; };
 		A91D5D0323B14A20000E3EA8 /* TinderCatCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TinderCatCore.xcodeproj; path = ../TinderCatCore/TinderCatCore.xcodeproj; sourceTree = "<group>"; };
 		A91D5D0923B14A23000E3EA8 /* TinderCatCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TinderCatCore.xcodeproj; path = ../TinderCatCore/TinderCatCore.xcodeproj; sourceTree = "<group>"; };
 		A91D5D1123B15170000E3EA8 /* BreedDetailModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailModule.swift; sourceTree = "<group>"; };
@@ -216,11 +216,7 @@
 				A915B06D2398198100991BDD /* Base */,
 				A915B06C2398196F00991BDD /* Application */,
 				A915B06E239819C300991BDD /* Resources */,
-				A915B07A23998F7200991BDD /* Coordinators */,
 				A95E68DD239FF70800BA2459 /* Helpers */,
-				A9D8194A23A2F07B008FAC64 /* Module.swift */,
-				A97BFCD523A919CF00804A22 /* ViewControllerComponent.swift */,
-				A97BFCD723A91A2300804A22 /* PresenterModule.swift */,
 			);
 			path = TinderCat;
 			sourceTree = "<group>";
@@ -246,6 +242,9 @@
 		A915B06C2398196F00991BDD /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				A9D8194A23A2F07B008FAC64 /* Module.swift */,
+				A97BFCD523A919CF00804A22 /* ViewControllerComponent.swift */,
+				A97BFCD723A91A2300804A22 /* PresenterModule.swift */,
 				A915AFD92398156700991BDD /* AppDelegate.swift */,
 				A915AFDB2398156700991BDD /* SceneDelegate.swift */,
 				A915AFE42398156800991BDD /* LaunchScreen.storyboard */,
@@ -256,6 +255,7 @@
 		A915B06D2398198100991BDD /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				A915B07823998E5400991BDD /* BaseCoordinator.swift */,
 				A915B04F239816E100991BDD /* BaseViewController.swift */,
 				A915B07D2399941C00991BDD /* BaseViewType.swift */,
 			);
@@ -268,15 +268,6 @@
 				A915AFE22398156800991BDD /* Assets.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		A915B07A23998F7200991BDD /* Coordinators */ = {
-			isa = PBXGroup;
-			children = (
-				A915B07823998E5400991BDD /* Coordinator.swift */,
-				A915B08A2399B84500991BDD /* CatViewCoordinator.swift */,
-			);
-			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		A91D5D0423B14A20000E3EA8 /* Products */ = {
@@ -340,6 +331,7 @@
 				A9D8194723A2D93B008FAC64 /* BreedContract.swift */,
 				A95E68F123A02E8400BA2459 /* BreedPresenter.swift */,
 				A915B0522398170700991BDD /* BreedViewController.swift */,
+				A915B08A2399B84500991BDD /* BreedCoordinator.swift */,
 			);
 			path = Breed;
 			sourceTree = "<group>";
@@ -580,14 +572,14 @@
 				A9D8194B23A2F07B008FAC64 /* Module.swift in Sources */,
 				A91D5D1223B15170000E3EA8 /* BreedDetailModule.swift in Sources */,
 				A9D8196823A3D9E4008FAC64 /* InteractorModule.swift in Sources */,
-				A915B07923998E5400991BDD /* Coordinator.swift in Sources */,
+				A915B07923998E5400991BDD /* BaseCoordinator.swift in Sources */,
 				A9D8197623A7E9C2008FAC64 /* BreedInteractorModule.swift in Sources */,
 				A91D5D1623B1523E000E3EA8 /* BreedDetailPresenter.swift in Sources */,
 				A915B07E2399941C00991BDD /* BaseViewType.swift in Sources */,
 				A9EE432E23AD7689004AE029 /* BreedDetailInteractorModule.swift in Sources */,
 				A95E68E7239FFA5D00BA2459 /* BasePresenter.swift in Sources */,
 				A915B0532398170700991BDD /* BreedViewController.swift in Sources */,
-				A915B08B2399B84500991BDD /* CatViewCoordinator.swift in Sources */,
+				A915B08B2399B84500991BDD /* BreedCoordinator.swift in Sources */,
 				A9D8194823A2D93B008FAC64 /* BreedContract.swift in Sources */,
 				A9D8196523A3D64E008FAC64 /* BreedModule.swift in Sources */,
 				A95E68EB239FFFC200BA2459 /* TableViewAdapter.swift in Sources */,

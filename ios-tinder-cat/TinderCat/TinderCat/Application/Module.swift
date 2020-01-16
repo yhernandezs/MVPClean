@@ -37,7 +37,5 @@ class AbstractModule: Module {
         self.interactorModule = dependencies.interactorModule
     }
 
-    func inject(viewController: UIViewController) {
-
-    }
+    func inject(viewController: UIViewController) { }
 }

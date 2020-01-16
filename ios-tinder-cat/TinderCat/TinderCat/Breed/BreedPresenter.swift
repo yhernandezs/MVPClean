@@ -15,6 +15,7 @@ class BreedPresenter: BasePresenter {
     private var cats: [Breed]?
 
     private let catInteractor: ObservableInteractor<[Breed], Any?>
+
     internal let disposeBag = DisposeBag()
 
     required init(catInteractor: ObservableInteractor<[Breed], Any?>) {
@@ -34,10 +35,10 @@ extension BreedPresenter: BreedPresenterType {
     func showDetail(_ cat: Breed) {
         ownView.catDetail(cat)
     }
-    
+
     func getCats() {
-        catInteractor.execute(params: nil, onSuccess: { [weak ownView] cats in
-            ownView?.displayCats(cats: cats)
+        catInteractor.execute(params: nil, onSuccess: { [weak ownView] breeds in
+            ownView?.displayCats(breeds: breeds)
         }) { [weak ownView] error in
             ownView?.hideProgress()
             //self?.handleException(error: error)

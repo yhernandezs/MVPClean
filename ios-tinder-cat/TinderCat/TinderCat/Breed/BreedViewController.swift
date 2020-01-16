@@ -12,7 +12,7 @@ import TinderCatCore
 import SkeletonView
 
 public protocol CatViewControllerDelegate: class {
-    func navigateToNextPage()
+    func navigateToNextPage(breed: Breed?)
 }
 
 class BreedViewController: BaseViewController {
@@ -43,6 +43,7 @@ class BreedViewController: BaseViewController {
         self.innerPresenter.getCats()
 
     }
+    
     override func setupViews() {
         containerView.backgroundColor = UIColor.red
         containerView.addSubview(tableView)
@@ -63,21 +64,21 @@ class BreedViewController: BaseViewController {
         tableView.leftAnchor.constraint(equalTo: containerView.leftAnchor, constant: 0).isActive = true
         tableView.rightAnchor.constraint(equalTo: containerView.rightAnchor, constant: 0).isActive = true
         tableView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: 0).isActive = true
-
     }
 
-    func showDetail(_ cat: Breed) {
-        innerPresenter.showDetail(cat)
+    func showDetail(_ breed: Breed) {
+        innerPresenter.showDetail(breed)
     }
 }
 
 extension BreedViewController: BreedViewType {
-    func catDetail(_ cat: Breed) {
-        self.delegate?.navigateToNextPage()
+    
+    func catDetail(_ breed: Breed) {
+        self.delegate?.navigateToNextPage(breed: breed)
     }
 
-    func displayCats(cats: [Breed]) {
-        catList = cats
+    func displayCats(breeds: [Breed]) {
+        catList = breeds
         self.skeleton = .data
         self.tableView.reloadData()
     }
@@ -93,7 +94,6 @@ extension BreedViewController: BreedViewType {
     func hideProgress() {
 
     }
-
 }
 
 extension BreedViewController: UITableViewDataSource {
@@ -109,7 +109,7 @@ extension BreedViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell")
-        
+
         switch self.skeleton {
         case .data:
             cell.textLabel?.text = self.catList[indexPath.row].name
@@ -125,6 +125,7 @@ extension BreedViewController: UITableViewDataSource {
         return cell
     }
 }
+
 extension BreedViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.showDetail(self.catList[indexPath.row])

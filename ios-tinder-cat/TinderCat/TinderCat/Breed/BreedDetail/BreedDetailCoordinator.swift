@@ -8,39 +8,20 @@
 
 import Foundation
 import UIKit
+import TinderCatCore
 
-protocol BackToFirstViewControllerDelegate: class {
-    
-    func navigateBackToFirstPage(newOrderCoordinator: BreedDetailCoordinator)
-    
-}
+class BreedDetailCoordinator: BaseCoordinator<Breed> {
 
-class BreedDetailCoordinator: Coordinator {
-    
-    var childCoordinators: [Coordinator] = []
-    
-    unowned let navigationController:UINavigationController
-    
-    // We use this delegate to keep a reference to the parent coordinator
     weak var delegate: BackToFirstViewControllerDelegate?
-    
+
     required init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
+        super.init(navigationController: navigationController)
     }
     
-    func start() {
-        let secondViewController : BreedDetailViewController = BreedDetailViewController()
-        secondViewController.delegate = self 
+    override func start(data: Breed) {
+        let secondViewController: BreedDetailViewController = BreedDetailViewController()
+        secondViewController.getBreed(data)
         self.navigationController.pushViewController(secondViewController, animated: true)
     }
 }
 
-extension BreedDetailCoordinator : BreedDetailViewControllerDelegate {
-    
-    func navigateToThirdPage() {
-    }
-    
-    func navigateToFirstPage() {
-        self.delegate?.navigateBackToFirstPage(newOrderCoordinator: self)
-    }
-}

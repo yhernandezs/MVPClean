@@ -12,24 +12,25 @@ import UIKit
 
 public protocol BreedDetailViewControllerDelegate: class {
     func navigateToFirstPage()
-    func navigateToThirdPage()
 }
 
 class BreedDetailViewController: BaseViewController {
+    
     private var containerView: UIView!
     private var imageView: UIImageView!
     private var titleLabel: UILabel!
     private var descriptionTextView: UITextView!
+    private var breed: Breed!
     public weak var delegate: BreedDetailViewControllerDelegate?
-
+    
     private var innerPresenter: BreedDetailPresenterType! {
         return self.presenter as? BreedDetailPresenterType
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.innerPresenter.bind(withView: self)
-        self.innerPresenter.getBreed("beng")
+        self.innerPresenter.getBreed(breed.id)
     }
 
     override func initializeComponents() {
@@ -48,7 +49,7 @@ class BreedDetailViewController: BaseViewController {
         imageView.backgroundColor = UIColor.red
         titleLabel.textColor = UIColor.black
         containerView.backgroundColor = UIColor.white
-        
+
         containerView.addSubview(imageView)
         containerView.addSubview(titleLabel)
         containerView.addSubview(descriptionTextView)
@@ -76,6 +77,9 @@ class BreedDetailViewController: BaseViewController {
         descriptionTextView.rightAnchor.constraint(equalTo: titleLabel.rightAnchor).isActive = true
         descriptionTextView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -10).isActive = true
 
+    }
+    func getBreed(_ breed: Breed)  {
+        self.breed = breed
     }
 }
 
