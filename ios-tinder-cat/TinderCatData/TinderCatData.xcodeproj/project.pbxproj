@@ -11,6 +11,10 @@
 		A915B0422398166E00991BDD /* TinderCatData.h in Headers */ = {isa = PBXBuildFile; fileRef = A915B0402398166E00991BDD /* TinderCatData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A915B056239817D400991BDD /* TinderCatCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A915B055239817D400991BDD /* TinderCatCore.framework */; };
 		A915B057239817D400991BDD /* TinderCatCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A915B055239817D400991BDD /* TinderCatCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A930E71523D5709300F6E504 /* FavoriteBreedRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A930E71423D5709300F6E504 /* FavoriteBreedRepository.swift */; };
+		A930E71C23D605DE00F6E504 /* BaseDataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = A930E71B23D605DE00F6E504 /* BaseDataAccess.swift */; };
+		A930E72023D6328D00F6E504 /* TinderCatData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A930E71E23D6328D00F6E504 /* TinderCatData.xcdatamodeld */; };
+		A930E72623D6370C00F6E504 /* BreedTransactionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A930E72523D6370C00F6E504 /* BreedTransactionType.swift */; };
 		A9D8194D23A2F125008FAC64 /* RepositoryModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8194C23A2F125008FAC64 /* RepositoryModule.swift */; };
 		A9D8195023A2F179008FAC64 /* ServiceModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8194F23A2F179008FAC64 /* ServiceModule.swift */; };
 		A9D8195423A2F2E3008FAC64 /* BaseAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8195323A2F2E3008FAC64 /* BaseAPIClient.swift */; };
@@ -45,6 +49,10 @@
 		A915B0402398166E00991BDD /* TinderCatData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TinderCatData.h; sourceTree = "<group>"; };
 		A915B0412398166E00991BDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A915B055239817D400991BDD /* TinderCatCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TinderCatCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A930E71423D5709300F6E504 /* FavoriteBreedRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBreedRepository.swift; sourceTree = "<group>"; };
+		A930E71B23D605DE00F6E504 /* BaseDataAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDataAccess.swift; sourceTree = "<group>"; };
+		A930E71F23D6328D00F6E504 /* TinderCatData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TinderCatData.xcdatamodel; sourceTree = "<group>"; };
+		A930E72523D6370C00F6E504 /* BreedTransactionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreedTransactionType.swift; sourceTree = "<group>"; };
 		A9D8194C23A2F125008FAC64 /* RepositoryModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModule.swift; sourceTree = "<group>"; };
 		A9D8194F23A2F179008FAC64 /* ServiceModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceModule.swift; sourceTree = "<group>"; };
 		A9D8195323A2F2E3008FAC64 /* BaseAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIClient.swift; sourceTree = "<group>"; };
@@ -101,6 +109,7 @@
 		A915B03F2398166E00991BDD /* TinderCatData */ = {
 			isa = PBXGroup;
 			children = (
+				A930E71623D5731E00F6E504 /* DataAccess */,
 				A9EE432323AD6445004AE029 /* Utils */,
 				A915B06F239841D700991BDD /* Helpers */,
 				A915B0722398422300991BDD /* Models */,
@@ -159,6 +168,7 @@
 		A915B0752398425C00991BDD /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				A930E71023D25C0B00F6E504 /* Local */,
 				A9D8196E23A3DDB8008FAC64 /* BreedRepository.swift */,
 			);
 			path = Repositories;
@@ -177,6 +187,32 @@
 			children = (
 			);
 			path = LocalMock;
+			sourceTree = "<group>";
+		};
+		A930E71023D25C0B00F6E504 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				A930E71423D5709300F6E504 /* FavoriteBreedRepository.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		A930E71623D5731E00F6E504 /* DataAccess */ = {
+			isa = PBXGroup;
+			children = (
+				A930E71D23D605E900F6E504 /* Breed */,
+				A930E71B23D605DE00F6E504 /* BaseDataAccess.swift */,
+				A930E71E23D6328D00F6E504 /* TinderCatData.xcdatamodeld */,
+			);
+			path = DataAccess;
+			sourceTree = "<group>";
+		};
+		A930E71D23D605E900F6E504 /* Breed */ = {
+			isa = PBXGroup;
+			children = (
+				A930E72523D6370C00F6E504 /* BreedTransactionType.swift */,
+			);
+			path = Breed;
 			sourceTree = "<group>";
 		};
 		A9D8194E23A2F154008FAC64 /* Module */ = {
@@ -329,8 +365,12 @@
 				A9EE432923AD6CD5004AE029 /* APIBreedDetail.swift in Sources */,
 				A9EE432523AD645D004AE029 /* DataConstants.swift in Sources */,
 				A9D8197123A3DF35008FAC64 /* APIBreedWrapper.swift in Sources */,
+				A930E71523D5709300F6E504 /* FavoriteBreedRepository.swift in Sources */,
+				A930E72023D6328D00F6E504 /* TinderCatData.xcdatamodeld in Sources */,
+				A930E71C23D605DE00F6E504 /* BaseDataAccess.swift in Sources */,
 				A9D8195423A2F2E3008FAC64 /* BaseAPIClient.swift in Sources */,
 				A9D8195D23A2F94D008FAC64 /* HelperModule.swift in Sources */,
+				A930E72623D6370C00F6E504 /* BreedTransactionType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,6 +572,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A930E71E23D6328D00F6E504 /* TinderCatData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A930E71F23D6328D00F6E504 /* TinderCatData.xcdatamodel */,
+			);
+			currentVersion = A930E71F23D6328D00F6E504 /* TinderCatData.xcdatamodel */;
+			path = TinderCatData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A915B0342398166E00991BDD /* Project object */;
 }

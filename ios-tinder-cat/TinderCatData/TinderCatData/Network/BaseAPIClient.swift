@@ -10,6 +10,7 @@ import Foundation
 import RxSwift
 import Vatosawa
 import Alamofire
+
 public class BaseAPIClient: ClientProtocol {
 
     public var manager: SessionManager!

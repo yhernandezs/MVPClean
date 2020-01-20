@@ -43,7 +43,7 @@ class BreedViewController: BaseViewController {
         self.innerPresenter.getCats()
 
     }
-    
+
     override func setupViews() {
         containerView.backgroundColor = UIColor.red
         containerView.addSubview(tableView)
@@ -72,7 +72,7 @@ class BreedViewController: BaseViewController {
 }
 
 extension BreedViewController: BreedViewType {
-    
+
     func catDetail(_ breed: Breed) {
         self.delegate?.navigateToNextPage(breed: breed)
     }

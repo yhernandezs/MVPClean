@@ -62,16 +62,17 @@ class BreedDetailViewController: BaseViewController {
     }
 
     override func setupViews() {
-        imageView.backgroundColor = UIColor.red
-        titleLabel.textColor = UIColor.black
+        imageView.image = UIImage(named: "logo")
+        titleLabel.textColor = UIColor.greenSea
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 20)
         containerView.backgroundColor = UIColor.white
 
-        favoriteButton.backgroundColor = UIColor.blue
+        favoriteButton.backgroundColor = UIColor.midnightBlue
         favoriteButton.layer.cornerRadius = 15
         favoriteButton.layer.masksToBounds = true
         favoriteButton.setTitle("Favorite", for: .normal)
 
-        tinderButton.backgroundColor = UIColor.red
+        tinderButton.backgroundColor = UIColor.greenSea
         tinderButton.layer.cornerRadius = 15
         tinderButton.layer.masksToBounds = true
         tinderButton.setTitle("Tinder", for: .normal)
@@ -92,12 +93,12 @@ class BreedDetailViewController: BaseViewController {
         containerView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
         containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
 
-        imageView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 10).isActive = true
+        imageView.topAnchor.constraint(equalTo: containerView.topAnchor).isActive = true
         imageView.leftAnchor.constraint(equalTo: containerView.leftAnchor, constant: 10).isActive = true
         imageView.rightAnchor.constraint(equalTo: containerView.rightAnchor, constant: -10).isActive = true
-        imageView.heightAnchor.constraint(equalToConstant: 300).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 250).isActive = true
 
-        titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 10).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20).isActive = true
         titleLabel.leftAnchor.constraint(equalTo: imageView.leftAnchor).isActive = true
         titleLabel.rightAnchor.constraint(equalTo: imageView.rightAnchor).isActive = true
 
@@ -111,6 +112,7 @@ class BreedDetailViewController: BaseViewController {
         stackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -10).isActive = true
 
     }
+    
     func getBreed(_ breed: Breed) {
         self.breed = breed
     }

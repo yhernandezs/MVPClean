@@ -17,7 +17,7 @@ protocol BreedServiceType {
 }
 
 class BreedService: BreedServiceType {
-  
+
     let breedAPIClient: ClientProtocol
 
     init(breedAPIClient: ClientProtocol) {
@@ -30,14 +30,13 @@ class BreedService: BreedServiceType {
             relativePath: "breeds",
             authorizationType: APIAuthorizationType.none))
     }
-    
-    func getBreedsDetail(with id: String) -> Observable<APIBreedDetail> {
-        //let breedsForIdEndPoint  = [String(format: "breeds/search%@", id)
-        let relativePath  = "breeds/\(id)"
 
-          return breedAPIClient.request(Endpoint<APIBreedDetail>(
+    func getBreedsDetail(with id: String) -> Observable<APIBreedDetail> {
+        let relativePath = "breeds/\(id)"
+
+        return breedAPIClient.request(Endpoint<APIBreedDetail>(
             method: .get,
             relativePath: relativePath
-          ))
-      }
+            ))
+    }
 }

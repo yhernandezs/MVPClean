@@ -6,4 +6,9 @@
 //  Copyright © 2020 Yesid Hernandez. All rights reserved.
 //
 
-import Foundation
+import RxSwift
+
+public protocol FavoriteBreedRepositoryType {
+    func storeFavorite(_ breed: Breed)
+    func getFavorite() -> Observable<[Breed]>
+}
