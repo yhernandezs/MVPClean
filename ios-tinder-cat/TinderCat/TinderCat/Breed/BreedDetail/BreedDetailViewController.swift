@@ -15,14 +15,25 @@ public protocol BreedDetailViewControllerDelegate: class {
 }
 
 class BreedDetailViewController: BaseViewController {
-    
+
     private var containerView: UIView!
     private var imageView: UIImageView!
     private var titleLabel: UILabel!
     private var descriptionTextView: UITextView!
+    private var favoriteButton: UIButton!
+    private var tinderButton: UIButton!
+    private lazy var stackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.spacing = 5
+        stackView.distribution = .fillEqually
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
+
     private var breed: Breed!
     public weak var delegate: BreedDetailViewControllerDelegate?
-    
+
     private var innerPresenter: BreedDetailPresenterType! {
         return self.presenter as? BreedDetailPresenterType
     }
@@ -38,11 +49,16 @@ class BreedDetailViewController: BaseViewController {
         imageView = UIImageView()
         titleLabel = UILabel()
         descriptionTextView = UITextView()
+        favoriteButton = UIButton()
+        tinderButton = UIButton()
 
         containerView.translatesAutoresizingMaskIntoConstraints = false
         imageView.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         descriptionTextView.translatesAutoresizingMaskIntoConstraints = false
+        favoriteButton.translatesAutoresizingMaskIntoConstraints = false
+        tinderButton.translatesAutoresizingMaskIntoConstraints = false
+
     }
 
     override func setupViews() {
@@ -50,9 +66,22 @@ class BreedDetailViewController: BaseViewController {
         titleLabel.textColor = UIColor.black
         containerView.backgroundColor = UIColor.white
 
+        favoriteButton.backgroundColor = UIColor.blue
+        favoriteButton.layer.cornerRadius = 15
+        favoriteButton.layer.masksToBounds = true
+        favoriteButton.setTitle("Favorite", for: .normal)
+
+        tinderButton.backgroundColor = UIColor.red
+        tinderButton.layer.cornerRadius = 15
+        tinderButton.layer.masksToBounds = true
+        tinderButton.setTitle("Tinder", for: .normal)
+
+        stackView.addArrangedSubview(tinderButton)
+        stackView.addArrangedSubview(favoriteButton)
         containerView.addSubview(imageView)
         containerView.addSubview(titleLabel)
         containerView.addSubview(descriptionTextView)
+        containerView.addSubview(stackView)
 
         view.addSubview(containerView)
     }
@@ -75,10 +104,14 @@ class BreedDetailViewController: BaseViewController {
         descriptionTextView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10).isActive = true
         descriptionTextView.leftAnchor.constraint(equalTo: titleLabel.leftAnchor).isActive = true
         descriptionTextView.rightAnchor.constraint(equalTo: titleLabel.rightAnchor).isActive = true
-        descriptionTextView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -10).isActive = true
+
+        stackView.topAnchor.constraint(equalTo: descriptionTextView.bottomAnchor).isActive = true
+        stackView.leftAnchor.constraint(equalTo: descriptionTextView.leftAnchor).isActive = true
+        stackView.rightAnchor.constraint(equalTo: descriptionTextView.rightAnchor).isActive = true
+        stackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -10).isActive = true
 
     }
-    func getBreed(_ breed: Breed)  {
+    func getBreed(_ breed: Breed) {
         self.breed = breed
     }
 }
