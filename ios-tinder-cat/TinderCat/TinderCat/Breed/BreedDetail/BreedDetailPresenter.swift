@@ -32,6 +32,10 @@ class BreesDetailPresenter: BasePresenter {
 }
 
 extension BreesDetailPresenter: BreedDetailPresenterType {
+    func showTinder() {
+        ownView.showTinderController()
+    }
+    
     func getBreed(_ id: String) {
 
         breedInteractor.execute(params: id, onSuccess: { [weak ownView] breedDeyail in

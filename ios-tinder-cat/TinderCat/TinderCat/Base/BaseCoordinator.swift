@@ -38,6 +38,10 @@ protocol BackToFirstViewControllerDelegate: class {
     func navigateBackToFirstPage(newOrderCoordinator: BreedDetailCoordinator)
 }
 
+protocol NavigateToNextController : AnyObject {
+    func navigateToNextController()
+}
+
 extension BaseCoordinator: BackToFirstViewControllerDelegate {
     
     func navigateBackToFirstPage(newOrderCoordinator: BreedDetailCoordinator) {

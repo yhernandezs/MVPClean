@@ -12,16 +12,23 @@ import TinderCatCore
 
 class BreedDetailCoordinator: BaseCoordinator<Breed> {
 
-    weak var delegate: BackToFirstViewControllerDelegate?
-
     required init(navigationController: UINavigationController) {
         super.init(navigationController: navigationController)
     }
-    
+
     override func start(data: Breed) {
-        let secondViewController: BreedDetailViewController = BreedDetailViewController()
-        secondViewController.getBreed(data)
-        self.navigationController.pushViewController(secondViewController, animated: true)
+        let breedDetailViewController: BreedDetailViewController = BreedDetailViewController()
+        breedDetailViewController.getBreed(data)
+        breedDetailViewController.delegate = self
+        self.navigationController.pushViewController(breedDetailViewController, animated: true)
     }
 }
 
+extension BreedDetailCoordinator: NavigateToNextController {
+
+    func navigateToNextController() {
+        let breedVoteCoordinator = BreedVoteCoordinator(navigationController: navigationController)
+        childCoordinators.append(breedVoteCoordinator)
+        breedVoteCoordinator.start()
+    }
+}

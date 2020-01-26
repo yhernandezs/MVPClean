@@ -11,8 +11,10 @@ import TinderCatCore
 
 protocol BreedDetailViewType: BaseView {
     func displayBreed(_ breed: BreedDetail)
+    func showTinderController()
 }
 
 protocol BreedDetailPresenterType: BasePresenterProtocol {
     func getBreed(_ id: String)
+    func showTinder()
 }

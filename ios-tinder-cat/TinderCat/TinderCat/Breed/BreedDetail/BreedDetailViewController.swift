@@ -10,10 +10,6 @@ import Foundation
 import TinderCatCore
 import UIKit
 
-public protocol BreedDetailViewControllerDelegate: class {
-    func navigateToFirstPage()
-}
-
 class BreedDetailViewController: BaseViewController {
 
     private var containerView: UIView!
@@ -32,7 +28,7 @@ class BreedDetailViewController: BaseViewController {
     }()
 
     private var breed: Breed!
-    public weak var delegate: BreedDetailViewControllerDelegate?
+    public weak var delegate: NavigateToNextController?
 
     private var innerPresenter: BreedDetailPresenterType! {
         return self.presenter as? BreedDetailPresenterType
@@ -76,6 +72,7 @@ class BreedDetailViewController: BaseViewController {
         tinderButton.layer.cornerRadius = 15
         tinderButton.layer.masksToBounds = true
         tinderButton.setTitle("Tinder", for: .normal)
+        tinderButton.addTarget(self, action: #selector(goToTinder), for: .touchUpInside)
 
         stackView.addArrangedSubview(tinderButton)
         stackView.addArrangedSubview(favoriteButton)
@@ -85,6 +82,10 @@ class BreedDetailViewController: BaseViewController {
         containerView.addSubview(stackView)
 
         view.addSubview(containerView)
+    }
+    
+    @objc private func goToTinder(){
+        innerPresenter.showTinder()
     }
 
     override func setConstraints() {
@@ -119,6 +120,10 @@ class BreedDetailViewController: BaseViewController {
 }
 
 extension BreedDetailViewController: BreedDetailViewType {
+    func showTinderController() {
+        self.delegate?.navigateToNextController()
+    }
+    
     func displayBreed(_ breed: BreedDetail) {
         titleLabel.text = breed.name
         descriptionTextView.text = breed.description

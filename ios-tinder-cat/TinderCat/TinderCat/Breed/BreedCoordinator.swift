@@ -28,7 +28,6 @@ extension BreedCoordinator: CatViewControllerDelegate {
         guard let breed = breed else { return }
         
         let breedDetailCoordinator = BreedDetailCoordinator(navigationController: navigationController)
-        breedDetailCoordinator.delegate = self
         childCoordinators.append(breedDetailCoordinator)
         breedDetailCoordinator.start(data: breed)
     }
