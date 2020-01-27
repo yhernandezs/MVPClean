@@ -29,14 +29,16 @@ class BreedVoteViewController: BaseViewController {
 
     override func initializeComponents() {
 
+        view = UIView()
+        stackContainer = StackContainerView()
+        stackContainer.translatesAutoresizingMaskIntoConstraints = false
+
     }
 
     override func setupViews() {
-        view = UIView()
+        
         view.backgroundColor = UIColor(red: 0.93, green: 0.93, blue: 0.93, alpha: 1.0)
-        stackContainer = StackContainerView()
         view.addSubview(stackContainer)
-        stackContainer.translatesAutoresizingMaskIntoConstraints = false
         configureNavigationBarButtonItem()
 
     }

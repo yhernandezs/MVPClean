@@ -35,6 +35,7 @@ class BreedViewController: BaseViewController {
 
         tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.accessibilityIdentifier = "tableview"
     }
 
     override func viewDidLoad() {

@@ -19,7 +19,7 @@ class FavoriteBreedService: FavoriteBreedServiceType {
     let services = BaseDataAccess()
 
     func storeFavorite(_ breed: FavoriteDao) {
-        services.createFavorite(breed: breed)
+        services.save(breed: breed)
     }
 
     func getFavorite() -> Observable<[FavoriteDao]> {

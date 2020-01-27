@@ -42,9 +42,8 @@ extension BreesDetailPresenter: BreedDetailPresenterType {
     func addToFavorite() {
         guard let breed = self.breed else { return }
 
-        interactor.execute(params: breed, onSuccess: { [weak ownView] breedDeyail in
+        interactor.execute(params: breed, onSuccess: {  breedDeyail in
 
-            print(breedDeyail)
         }) { [weak ownView] error in
             ownView?.hideConnectivityError()
             print(error)

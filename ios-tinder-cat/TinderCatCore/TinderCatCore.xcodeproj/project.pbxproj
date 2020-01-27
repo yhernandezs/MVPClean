@@ -13,6 +13,7 @@
 		A930E71A23D57C5400F6E504 /* GetFavoriteBreedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A930E71923D57C5300F6E504 /* GetFavoriteBreedInteractor.swift */; };
 		A958BC3923DE6DEA00F0B2D5 /* SetFavoriteBreedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A958BC3823DE6DEA00F0B2D5 /* SetFavoriteBreedInteractor.swift */; };
 		A95C3D6423DF3E0A0021CB5A /* FavoriteBreed.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95C3D6323DF3E0A0021CB5A /* FavoriteBreed.swift */; };
+		A95C3D7623DFA3360021CB5A /* FavoriteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95C3D7523DFA3360021CB5A /* FavoriteImage.swift */; };
 		A9D8194623A2D634008FAC64 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8194523A2D634008FAC64 /* Interactor.swift */; };
 		A9D8196B23A3DC4D008FAC64 /* BreedRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8196A23A3DC4D008FAC64 /* BreedRepositoryType.swift */; };
 		A9D8196D23A3DC9F008FAC64 /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8196C23A3DC9F008FAC64 /* Breed.swift */; };
@@ -32,6 +33,7 @@
 		A930E71923D57C5300F6E504 /* GetFavoriteBreedInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFavoriteBreedInteractor.swift; sourceTree = "<group>"; };
 		A958BC3823DE6DEA00F0B2D5 /* SetFavoriteBreedInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetFavoriteBreedInteractor.swift; sourceTree = "<group>"; };
 		A95C3D6323DF3E0A0021CB5A /* FavoriteBreed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBreed.swift; sourceTree = "<group>"; };
+		A95C3D7523DFA3360021CB5A /* FavoriteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteImage.swift; sourceTree = "<group>"; };
 		A9D8194523A2D634008FAC64 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		A9D8196A23A3DC4D008FAC64 /* BreedRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedRepositoryType.swift; sourceTree = "<group>"; };
 		A9D8196C23A3DC9F008FAC64 /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		A915B0152398161100991BDD /* TinderCatCore */ = {
 			isa = PBXGroup;
 			children = (
+				A95C3D7323DFA2EF0021CB5A /* Mocks */,
 				A915B0652398186E00991BDD /* Factories */,
 				A915B0662398187A00991BDD /* Helpers */,
 				A915B0672398188600991BDD /* Interactors */,
@@ -158,6 +161,22 @@
 				A930E71223D5707300F6E504 /* FavoriteBreedRepositoryType.swift */,
 			);
 			path = Local;
+			sourceTree = "<group>";
+		};
+		A95C3D7323DFA2EF0021CB5A /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				A95C3D7423DFA2FE0021CB5A /* Image */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		A95C3D7423DFA2FE0021CB5A /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				A95C3D7523DFA3360021CB5A /* FavoriteImage.swift */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 		A9D8197223A3EB80008FAC64 /* Breed */ = {
@@ -287,6 +306,7 @@
 				A930E71323D5707300F6E504 /* FavoriteBreedRepositoryType.swift in Sources */,
 				A91D5D1023B14BE3000E3EA8 /* GetBreedDetailInteractor.swift in Sources */,
 				A958BC3923DE6DEA00F0B2D5 /* SetFavoriteBreedInteractor.swift in Sources */,
+				A95C3D7623DFA3360021CB5A /* FavoriteImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,7 +20,7 @@ public class SetFavoriteBreedInteractor: CompletableInteractor<BreedDetail?> {
     public override func buildUseCase(params: BreedDetail?) -> Completable {
         return Completable.create(subscribe: { completable -> Disposable in
             do {
-                let favorite = FavoriteBreed(image: "https://cdn2.thecatapi.com/images/FrT-WjAOJ.jpg", name: params!.name)
+                let favorite = FavoriteBreed(image: FavoriteImage.getImage(), name: params!.name)
                 self.breedRepository.storeFavorite(favorite)
                 completable(CompletableEvent.completed)
             } catch let err {

@@ -31,7 +31,7 @@ public class BaseDataAccess {
         return container
     }()
     
-    func createFavorite(breed: FavoriteDao) {
+    func save(breed: FavoriteDao) {
 
         let context = persistentContainer.viewContext
         let favoriteEntity = NSEntityDescription.entity(forEntityName: "Favorite", in: context)
