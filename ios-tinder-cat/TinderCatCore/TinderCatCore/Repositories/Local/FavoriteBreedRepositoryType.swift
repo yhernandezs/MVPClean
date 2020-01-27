@@ -9,6 +9,6 @@
 import RxSwift
 
 public protocol FavoriteBreedRepositoryType {
-    func storeFavorite(_ breed: Breed)
-    func getFavorite() -> Observable<[Breed]>
+    func storeFavorite(_ breed: FavoriteBreed)
+    func getFavorite() -> Observable<[FavoriteBreed]>
 }

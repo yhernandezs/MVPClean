@@ -8,16 +8,16 @@
 
 import RxSwift
 
-public class GetFavoriteBreedInteractor: ObservableInteractor<[Breed], Any?> {
+public class GetFavoriteBreedInteractor: ObservableInteractor<[FavoriteBreed], Any?> {
 
     private let breedRepository: FavoriteBreedRepositoryType
-    private var breeds: [Breed]?
+    private var breeds: [FavoriteBreed]?
 
     public init(breedRepository: FavoriteBreedRepositoryType) {
         self.breedRepository = breedRepository
     }
 
-    override public func buildUseCase(params: Any?) -> Observable<[Breed]> {
+    override public func buildUseCase(params: Any?) -> Observable<[FavoriteBreed]> {
         return breedRepository.getFavorite().do(onNext: { favorites in
             self.breeds = favorites
         }).catchError({ error in

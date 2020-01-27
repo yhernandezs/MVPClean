@@ -17,4 +17,5 @@ protocol BreedDetailViewType: BaseView {
 protocol BreedDetailPresenterType: BasePresenterProtocol {
     func getBreed(_ id: String)
     func showTinder()
+    func addToFavorite()
 }

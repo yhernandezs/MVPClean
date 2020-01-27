@@ -17,9 +17,14 @@ public protocol ClientProtocol {
 public class ServiceModule {
 
     var catAPIClient: ClientProtocol = BaseAPIClient()
+    var dataAcces  = FavoriteBreedService()
 
     lazy var catService: BreedServiceType = {
         return BreedService(breedAPIClient: catAPIClient)
+    }()
+    
+    lazy var favoriteService: FavoriteBreedServiceType = {
+        return FavoriteBreedService()
     }()
 
 }

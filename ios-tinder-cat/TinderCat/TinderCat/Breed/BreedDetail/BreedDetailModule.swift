@@ -13,7 +13,7 @@ import UIKit
 class BreedDetailModule: AbstractModule {
     override func inject(viewController: UIViewController) {
 
-        let presenter = BreesDetailPresenter(breedInteractor: interactorModule.getBreedDetailInteractor)
+        let presenter = BreesDetailPresenter(breedInteractor: interactorModule.getBreedDetailInteractor,interactor: interactorModule.setBreedDetailInteractor)
         (viewController as? BreedDetailViewController)?.presenter = presenter
     }
 }

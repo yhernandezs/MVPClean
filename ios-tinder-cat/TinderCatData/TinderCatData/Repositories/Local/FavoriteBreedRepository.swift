@@ -12,20 +12,21 @@ import RxSwift
 
 class FavoriteBreedRepository: FavoriteBreedRepositoryType {
     
-    private let breedTransactionType: BreedTransactionType
+    private let favoriteBreedServiceType: FavoriteBreedServiceType
+    let services = FavoriteBreedService()
 
-    init(breedTransactionType: BreedTransactionType) {
-        self.breedTransactionType = breedTransactionType
+    init(favoriteBreedServiceType: FavoriteBreedServiceType) {
+        self.favoriteBreedServiceType = favoriteBreedServiceType
+    }
+    func storeFavorite(_ breed: FavoriteBreed) {
+        let favoriteDao = FavoriteDao(image: breed.image, name: breed.name)
+        services.storeFavorite(favoriteDao)
     }
     
-    func storeFavorite(_ breed: Breed) {
-        
-    }
-    
-    func getFavorite() -> Observable<[Breed]> {
-        return breedTransactionType.getFavorite()
+    func getFavorite() -> Observable<[FavoriteBreed]> {
+        return favoriteBreedServiceType.getFavorite()
         .map({ apiBreeds in
-            var breeds: [Breed] = []
+            var breeds: [FavoriteBreed] = []
 
             try apiBreeds.forEach({ apiBreeds in
                 breeds.append(try APIBreedWrapper.map(apiBreeds))

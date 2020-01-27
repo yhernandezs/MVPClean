@@ -14,7 +14,10 @@
 		A930E71523D5709300F6E504 /* FavoriteBreedRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A930E71423D5709300F6E504 /* FavoriteBreedRepository.swift */; };
 		A930E71C23D605DE00F6E504 /* BaseDataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = A930E71B23D605DE00F6E504 /* BaseDataAccess.swift */; };
 		A930E72023D6328D00F6E504 /* TinderCatData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A930E71E23D6328D00F6E504 /* TinderCatData.xcdatamodeld */; };
-		A930E72623D6370C00F6E504 /* BreedTransactionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A930E72523D6370C00F6E504 /* BreedTransactionType.swift */; };
+		A958BC3723DE680F00F0B2D5 /* FavoriteDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = A958BC3623DE680F00F0B2D5 /* FavoriteDao.swift */; };
+		A958BC3C23DE86A000F0B2D5 /* FavoriteBreedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A958BC3B23DE86A000F0B2D5 /* FavoriteBreedService.swift */; };
+		A958BC4223DE95F800F0B2D5 /* Favorite+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A958BC4123DE95F800F0B2D5 /* Favorite+CoreDataClass.swift */; };
+		A958BC4423DE960B00F0B2D5 /* Favorite+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A958BC4323DE960B00F0B2D5 /* Favorite+CoreDataProperties.swift */; };
 		A9D8194D23A2F125008FAC64 /* RepositoryModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8194C23A2F125008FAC64 /* RepositoryModule.swift */; };
 		A9D8195023A2F179008FAC64 /* ServiceModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8194F23A2F179008FAC64 /* ServiceModule.swift */; };
 		A9D8195423A2F2E3008FAC64 /* BaseAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8195323A2F2E3008FAC64 /* BaseAPIClient.swift */; };
@@ -52,7 +55,10 @@
 		A930E71423D5709300F6E504 /* FavoriteBreedRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBreedRepository.swift; sourceTree = "<group>"; };
 		A930E71B23D605DE00F6E504 /* BaseDataAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDataAccess.swift; sourceTree = "<group>"; };
 		A930E71F23D6328D00F6E504 /* TinderCatData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TinderCatData.xcdatamodel; sourceTree = "<group>"; };
-		A930E72523D6370C00F6E504 /* BreedTransactionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreedTransactionType.swift; sourceTree = "<group>"; };
+		A958BC3623DE680F00F0B2D5 /* FavoriteDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDao.swift; sourceTree = "<group>"; };
+		A958BC3B23DE86A000F0B2D5 /* FavoriteBreedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBreedService.swift; sourceTree = "<group>"; };
+		A958BC4123DE95F800F0B2D5 /* Favorite+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorite+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A958BC4323DE960B00F0B2D5 /* Favorite+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorite+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A9D8194C23A2F125008FAC64 /* RepositoryModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModule.swift; sourceTree = "<group>"; };
 		A9D8194F23A2F179008FAC64 /* ServiceModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceModule.swift; sourceTree = "<group>"; };
 		A9D8195323A2F2E3008FAC64 /* BaseAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIClient.swift; sourceTree = "<group>"; };
@@ -144,6 +150,7 @@
 		A915B0722398422300991BDD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A958BC3523DE67EA00F0B2D5 /* DataAccess */,
 				A9D8195823A2F576008FAC64 /* Breed */,
 			);
 			path = Models;
@@ -200,17 +207,27 @@
 		A930E71623D5731E00F6E504 /* DataAccess */ = {
 			isa = PBXGroup;
 			children = (
-				A930E71D23D605E900F6E504 /* Breed */,
+				A958BC3A23DE868200F0B2D5 /* Breed */,
 				A930E71B23D605DE00F6E504 /* BaseDataAccess.swift */,
 				A930E71E23D6328D00F6E504 /* TinderCatData.xcdatamodeld */,
 			);
 			path = DataAccess;
 			sourceTree = "<group>";
 		};
-		A930E71D23D605E900F6E504 /* Breed */ = {
+		A958BC3523DE67EA00F0B2D5 /* DataAccess */ = {
 			isa = PBXGroup;
 			children = (
-				A930E72523D6370C00F6E504 /* BreedTransactionType.swift */,
+				A958BC3623DE680F00F0B2D5 /* FavoriteDao.swift */,
+			);
+			path = DataAccess;
+			sourceTree = "<group>";
+		};
+		A958BC3A23DE868200F0B2D5 /* Breed */ = {
+			isa = PBXGroup;
+			children = (
+				A958BC3B23DE86A000F0B2D5 /* FavoriteBreedService.swift */,
+				A958BC4123DE95F800F0B2D5 /* Favorite+CoreDataClass.swift */,
+				A958BC4323DE960B00F0B2D5 /* Favorite+CoreDataProperties.swift */,
 			);
 			path = Breed;
 			sourceTree = "<group>";
@@ -358,19 +375,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9D8195723A2F521008FAC64 /* BreedServiceType.swift in Sources */,
+				A958BC4423DE960B00F0B2D5 /* Favorite+CoreDataProperties.swift in Sources */,
 				A9D8196F23A3DDB8008FAC64 /* BreedRepository.swift in Sources */,
 				A9D8195B23A2F58D008FAC64 /* APIBreed.swift in Sources */,
 				A9D8195023A2F179008FAC64 /* ServiceModule.swift in Sources */,
+				A958BC3C23DE86A000F0B2D5 /* FavoriteBreedService.swift in Sources */,
 				A9D8194D23A2F125008FAC64 /* RepositoryModule.swift in Sources */,
 				A9EE432923AD6CD5004AE029 /* APIBreedDetail.swift in Sources */,
 				A9EE432523AD645D004AE029 /* DataConstants.swift in Sources */,
 				A9D8197123A3DF35008FAC64 /* APIBreedWrapper.swift in Sources */,
+				A958BC3723DE680F00F0B2D5 /* FavoriteDao.swift in Sources */,
 				A930E71523D5709300F6E504 /* FavoriteBreedRepository.swift in Sources */,
+				A958BC4223DE95F800F0B2D5 /* Favorite+CoreDataClass.swift in Sources */,
 				A930E72023D6328D00F6E504 /* TinderCatData.xcdatamodeld in Sources */,
 				A930E71C23D605DE00F6E504 /* BaseDataAccess.swift in Sources */,
 				A9D8195423A2F2E3008FAC64 /* BaseAPIClient.swift in Sources */,
 				A9D8195D23A2F94D008FAC64 /* HelperModule.swift in Sources */,
-				A930E72623D6370C00F6E504 /* BreedTransactionType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

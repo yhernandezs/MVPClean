@@ -29,6 +29,12 @@
 		A91D5D1823B15258000E3EA8 /* BreedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91D5D1723B15258000E3EA8 /* BreedDetailViewController.swift */; };
 		A930E72B23D6517B00F6E504 /* BreedVoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A930E72A23D6517B00F6E504 /* BreedVoteViewController.swift */; };
 		A930E72D23D6550F00F6E504 /* BreedVoteCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A930E72C23D6550F00F6E504 /* BreedVoteCoordinator.swift */; };
+		A95C3D6623DF776A0021CB5A /* StackContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95C3D6523DF776A0021CB5A /* StackContainerView.swift */; };
+		A95C3D6A23DF77B10021CB5A /* SwipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95C3D6923DF77B10021CB5A /* SwipeCardView.swift */; };
+		A95C3D6C23DF77E70021CB5A /* BreedVoteContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95C3D6B23DF77E70021CB5A /* BreedVoteContract.swift */; };
+		A95C3D6E23DF7DDE0021CB5A /* BreedVotePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95C3D6D23DF7DDE0021CB5A /* BreedVotePresenter.swift */; };
+		A95C3D7023DF7F7F0021CB5A /* BreedVoteModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95C3D6F23DF7F7F0021CB5A /* BreedVoteModule.swift */; };
+		A95C3D7223DF7FE90021CB5A /* BreedVoteInteractorModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95C3D7123DF7FE90021CB5A /* BreedVoteInteractorModule.swift */; };
 		A95E68DC239FF6F100BA2459 /* ErrorHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95E68DB239FF6F100BA2459 /* ErrorHandlerProtocol.swift */; };
 		A95E68E0239FF81D00BA2459 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95E68DF239FF81D00BA2459 /* BaseView.swift */; };
 		A95E68E7239FFA5D00BA2459 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95E68E6239FFA5D00BA2459 /* BasePresenter.swift */; };
@@ -123,6 +129,12 @@
 		A91D5D1723B15258000E3EA8 /* BreedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailViewController.swift; sourceTree = "<group>"; };
 		A930E72A23D6517B00F6E504 /* BreedVoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedVoteViewController.swift; sourceTree = "<group>"; };
 		A930E72C23D6550F00F6E504 /* BreedVoteCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedVoteCoordinator.swift; sourceTree = "<group>"; };
+		A95C3D6523DF776A0021CB5A /* StackContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackContainerView.swift; sourceTree = "<group>"; };
+		A95C3D6923DF77B10021CB5A /* SwipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCardView.swift; sourceTree = "<group>"; };
+		A95C3D6B23DF77E70021CB5A /* BreedVoteContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedVoteContract.swift; sourceTree = "<group>"; };
+		A95C3D6D23DF7DDE0021CB5A /* BreedVotePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedVotePresenter.swift; sourceTree = "<group>"; };
+		A95C3D6F23DF7F7F0021CB5A /* BreedVoteModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedVoteModule.swift; sourceTree = "<group>"; };
+		A95C3D7123DF7FE90021CB5A /* BreedVoteInteractorModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedVoteInteractorModule.swift; sourceTree = "<group>"; };
 		A95E68DB239FF6F100BA2459 /* ErrorHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlerProtocol.swift; sourceTree = "<group>"; };
 		A95E68DF239FF81D00BA2459 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		A95E68E6239FFA5D00BA2459 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
@@ -295,6 +307,11 @@
 			children = (
 				A930E72A23D6517B00F6E504 /* BreedVoteViewController.swift */,
 				A930E72C23D6550F00F6E504 /* BreedVoteCoordinator.swift */,
+				A95C3D6523DF776A0021CB5A /* StackContainerView.swift */,
+				A95C3D6923DF77B10021CB5A /* SwipeCardView.swift */,
+				A95C3D6B23DF77E70021CB5A /* BreedVoteContract.swift */,
+				A95C3D6D23DF7DDE0021CB5A /* BreedVotePresenter.swift */,
+				A95C3D6F23DF7F7F0021CB5A /* BreedVoteModule.swift */,
 			);
 			path = BreedVote;
 			sourceTree = "<group>";
@@ -355,6 +372,7 @@
 			children = (
 				A9D8197523A7E9C2008FAC64 /* BreedInteractorModule.swift */,
 				A9EE432D23AD7689004AE029 /* BreedDetailInteractorModule.swift */,
+				A95C3D7123DF7FE90021CB5A /* BreedVoteInteractorModule.swift */,
 			);
 			path = Breed;
 			sourceTree = "<group>";
@@ -579,15 +597,19 @@
 				A97BFCD623A919CF00804A22 /* ViewControllerComponent.swift in Sources */,
 				A97BFCD823A91A2300804A22 /* PresenterModule.swift in Sources */,
 				A930E72B23D6517B00F6E504 /* BreedVoteViewController.swift in Sources */,
+				A95C3D7023DF7F7F0021CB5A /* BreedVoteModule.swift in Sources */,
 				A95E68E0239FF81D00BA2459 /* BaseView.swift in Sources */,
 				A9CEDDF823BA97110026F097 /* BreedDetailCoordinator.swift in Sources */,
 				A95E68F223A02E8400BA2459 /* BreedPresenter.swift in Sources */,
 				A915AFDA2398156700991BDD /* AppDelegate.swift in Sources */,
+				A95C3D7223DF7FE90021CB5A /* BreedVoteInteractorModule.swift in Sources */,
 				A91D5D1823B15258000E3EA8 /* BreedDetailViewController.swift in Sources */,
+				A95C3D6E23DF7DDE0021CB5A /* BreedVotePresenter.swift in Sources */,
 				A9D8194B23A2F07B008FAC64 /* Module.swift in Sources */,
 				A91D5D1223B15170000E3EA8 /* BreedDetailModule.swift in Sources */,
 				A9D8196823A3D9E4008FAC64 /* InteractorModule.swift in Sources */,
 				A915B07923998E5400991BDD /* BaseCoordinator.swift in Sources */,
+				A95C3D6623DF776A0021CB5A /* StackContainerView.swift in Sources */,
 				A9D8197623A7E9C2008FAC64 /* BreedInteractorModule.swift in Sources */,
 				A91D5D1623B1523E000E3EA8 /* BreedDetailPresenter.swift in Sources */,
 				A915B07E2399941C00991BDD /* BaseViewType.swift in Sources */,
@@ -601,6 +623,8 @@
 				A95E68EB239FFFC200BA2459 /* TableViewAdapter.swift in Sources */,
 				A915AFDC2398156700991BDD /* SceneDelegate.swift in Sources */,
 				A95E68DC239FF6F100BA2459 /* ErrorHandlerProtocol.swift in Sources */,
+				A95C3D6C23DF77E70021CB5A /* BreedVoteContract.swift in Sources */,
+				A95C3D6A23DF77B10021CB5A /* SwipeCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

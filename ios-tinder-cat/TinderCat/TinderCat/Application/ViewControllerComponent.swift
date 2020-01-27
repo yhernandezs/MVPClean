@@ -24,14 +24,17 @@ class ViewControllerComponent {
         self.helperModule = HelperModule()
         self.repositoryModule = RepositoryModule()
         self.interactorModule = InteractorModule(repositoryModule: repositoryModule,
-                                                 helperModule: helperModule)
+            helperModule: helperModule)
         self.presenterModule = PresenterModule(interactorModule: interactorModule)
-        
+
         let dependencies = AbstractModule.InputDependencies(helperModule: helperModule,
-                   repositoryModule: repositoryModule,
-                   interactorModule: interactorModule)
+            repositoryModule: repositoryModule,
+            interactorModule: interactorModule)
         modules[NSStringFromClass(BreedViewController.self.classForCoder())] = BreedModule(dependencies: dependencies)
         modules[NSStringFromClass(BreedDetailViewController.self.classForCoder())] = BreedDetailModule(dependencies: dependencies)
+        modules[NSStringFromClass(BreedVoteViewController.self.classForCoder())] = BreedVoteModule(dependencies: dependencies)
+
+
 
 
 

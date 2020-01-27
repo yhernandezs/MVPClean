@@ -20,5 +20,10 @@ class APIBreedWrapper {
 
         return BreedDetail(id: input.id, name: input.name, description: input.description)
     }
+    
+    static func map(_ input: FavoriteDao) throws -> FavoriteBreed {
+
+        return FavoriteBreed(image: input.image!, name: input.name!)
+    }
 }
 

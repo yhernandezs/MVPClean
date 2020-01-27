@@ -66,7 +66,9 @@ class BreedDetailViewController: BaseViewController {
         favoriteButton.backgroundColor = UIColor.midnightBlue
         favoriteButton.layer.cornerRadius = 15
         favoriteButton.layer.masksToBounds = true
-        favoriteButton.setTitle("Favorite", for: .normal)
+        favoriteButton.setTitle("Add to favorite", for: .normal)
+        favoriteButton.addTarget(self, action: #selector(saveFavorite), for: .touchUpInside)
+
 
         tinderButton.backgroundColor = UIColor.greenSea
         tinderButton.layer.cornerRadius = 15
@@ -87,6 +89,10 @@ class BreedDetailViewController: BaseViewController {
     @objc private func goToTinder(){
         innerPresenter.showTinder()
     }
+    
+    @objc private func saveFavorite(){
+           innerPresenter.addToFavorite()
+       }
 
     override func setConstraints() {
         containerView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
